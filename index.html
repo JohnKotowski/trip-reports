@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andalucía Arc · Jul 21 → Aug 1, 2026</title>
+<style>
+  :root {
+    --cream: #faf6ef;
+    --ink: #1f1a13;
+    --rust: #b85428;
+    --rust-dark: #8c3d1d;
+    --olive: #6e7c4a;
+    --sand: #ede4d2;
+    --slate: #4a4239;
+    --rule: #d9cfb9;
+    --ocean: #2a6f7a;
+    --gold: #c89030;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 28px 22px 80px; }
+  header.cover {
+    position: relative;
+    background: linear-gradient(135deg, #c75a30 0%, #c89030 50%, #2a6f7a 100%);
+    color: #fff;
+    padding: 64px 36px;
+    border-radius: 12px;
+    margin-bottom: 28px;
+    overflow: hidden;
+  }
+  header.cover h1 { font-size: 36px; margin: 0 0 8px; letter-spacing: -0.02em; line-height: 1.12; }
+  header.cover .sub { font-size: 15px; opacity: 0.94; margin: 0; }
+  header.cover .badge {
+    display: inline-block; background: rgba(255,255,255,0.2); padding: 4px 10px;
+    border-radius: 12px; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  h2 { font-size: 24px; color: var(--rust-dark); margin: 44px 0 12px; padding-bottom: 6px; border-bottom: 2px solid var(--rust); }
+  h3 { font-size: 18px; margin: 22px 0 6px; color: var(--ink); }
+  h4 { font-size: 14px; margin: 14px 0 4px; color: var(--slate); text-transform: uppercase; letter-spacing: 0.05em; }
+  p { margin: 6px 0 12px; }
+
+  .fact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 14px 0 20px; }
+  .fact { background: var(--sand); padding: 10px 12px; border-radius: 6px; border-left: 3px solid var(--olive); }
+  .fact .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--slate); margin: 0 0 2px; }
+  .fact .value { font-size: 14px; font-weight: 600; margin: 0; }
+
+  .stop { background: #fff; border: 1px solid var(--rule); border-radius: 10px; padding: 22px; margin: 24px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+  .stop h2 { margin-top: 0; }
+  .stop-meta { font-size: 13px; color: var(--slate); margin: -8px 0 16px; }
+  .stop-meta strong { color: var(--ink); }
+
+  .hero-img { width: 100%; height: 360px; object-fit: cover; border-radius: 8px; display: block; margin-bottom: 14px; background: var(--sand); cursor: zoom-in; transition: opacity 0.2s; }
+  .hero-img:hover { opacity: 0.92; }
+
+  .photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin: 12px 0 18px; }
+  .photo-grid img { width: 100%; height: 180px; object-fit: cover; border-radius: 6px; display: block; background: var(--sand); cursor: zoom-in; transition: opacity 0.2s; }
+  .photo-grid img:hover { opacity: 0.92; }
+  .photo-grid figure { margin: 0; }
+  .photo-grid figcaption { font-size: 12px; color: var(--slate); padding: 4px 2px; }
+  .photo-grid.four { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+  .photo-grid.four img { height: 150px; }
+
+  .day { border-left: 3px solid var(--ocean); padding: 12px 0 12px 16px; margin: 12px 0; }
+  .day .head { font-weight: 700; color: var(--rust-dark); font-size: 15px; margin-bottom: 4px; }
+  .day .activities { margin: 6px 0; padding-left: 16px; }
+  .day .activities li { margin-bottom: 4px; font-size: 14px; }
+
+  .transit { background: var(--sand); border-left: 3px solid var(--olive); padding: 10px 14px; margin: 14px 0; border-radius: 4px; font-size: 13px; }
+  .transit strong { color: var(--rust-dark); }
+
+  .pillrow { margin: 8px 0; }
+  .pill { display: inline-block; background: var(--sand); color: var(--ink); font-size: 12px; padding: 3px 10px; border-radius: 12px; margin: 3px 4px 3px 0; }
+  .pill.beach { background: #cae7ec; color: #1e5860; }
+  .pill.hike { background: #d9e3c2; color: #404d20; }
+  .pill.food { background: #f3d8c4; color: #7b3a15; }
+  .pill.culture { background: #e3d0e8; color: #5a3a66; }
+
+  .btn { display: inline-block; background: var(--rust); color: #fff !important; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-weight: 600; font-size: 13px; margin: 4px 4px 4px 0; }
+  .btn.secondary { background: var(--ocean); }
+  .btn.olive { background: var(--olive); }
+  .btn:hover { opacity: 0.9; }
+
+  ul.notes { padding-left: 18px; margin: 6px 0; font-size: 14px; }
+  ul.notes li { margin-bottom: 4px; }
+
+  .footnote { font-size: 12px; color: var(--slate); margin-top: 38px; padding-top: 16px; border-top: 1px solid var(--rule); }
+  .nav { background: var(--sand); border-radius: 6px; padding: 12px 14px; margin: 0 0 20px; font-size: 13px; position: sticky; top: 8px; z-index: 10; }
+  .nav a { color: var(--rust-dark); text-decoration: none; margin-right: 14px; font-weight: 600; }
+  .nav a:hover { text-decoration: underline; }
+
+  .callout {
+    background: #fff7ec;
+    border-left: 4px solid var(--gold);
+    padding: 12px 16px;
+    margin: 14px 0;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .callout strong { color: var(--rust-dark); }
+
+  /* Lightbox */
+  #lb {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.94);
+    z-index: 9999;
+    align-items: center; justify-content: center;
+    padding: 24px;
+    cursor: zoom-out;
+  }
+  #lb.active { display: flex; }
+  #lb img {
+    max-width: 96vw;
+    max-height: 92vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+  }
+  #lb .close-hint {
+    position: absolute; top: 18px; right: 20px;
+    color: rgba(255,255,255,0.7); font-size: 28px;
+    font-weight: 300;
+    cursor: pointer;
+    line-height: 1;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="cover">
+  <div class="badge">Itinerary v4 · Andalucía Arc · Option B · Click images to expand</div>
+  <h1>Spain by Train · 11 nights of wide sandy beaches, Moorish cities &amp; white villages</h1>
+  <p class="sub">July 21 → August 1, 2026 · 4A + 1C · Fly CDG↔SVQ (Seville) · Train + bus between stops</p>
+</header>
+
+<nav class="nav">
+  <a href="#overview">Overview</a>
+  <a href="#sevilla">Sevilla</a>
+  <a href="#costadelaluz">Costa de la Luz</a>
+  <a href="#ronda">Ronda &amp; Grazalema</a>
+  <a href="#logistics">Logistics</a>
+</nav>
+
+<section id="overview">
+  <h2>The arc at a glance</h2>
+  <div class="fact-grid">
+    <div class="fact"><p class="label">Total nights</p><p class="value">11</p></div>
+    <div class="fact"><p class="label">Stops</p><p class="value">3 Airbnbs</p></div>
+    <div class="fact"><p class="label">Beach days</p><p class="value">5+</p></div>
+    <div class="fact"><p class="label">Cultural anchors</p><p class="value">2 UNESCO</p></div>
+    <div class="fact"><p class="label">Hike / pueblo days</p><p class="value">2+</p></div>
+    <div class="fact"><p class="label">Internal flights</p><p class="value">0</p></div>
+  </div>
+  <p>The Costa de la Luz is literally the Algarve continued — the same Atlantic coast, the same wide soft-sand beaches with dunes and pine forest behind them, just on the Spanish side. <strong>Bolonia, Zahara de los Atunes, and Tarifa</strong> are consistently rated among Europe's best beaches, and they're noticeably emptier than Algarve in peak August. We anchor the trip with three world-class cultural stops: <strong>Sevilla</strong> (cathedral + Alcázar + flamenco), the Costa de la Luz beach base, and <strong>Ronda + the Pueblos Blancos</strong> (white villages built into cliffs) with the Sierra de Grazalema for hiking.</p>
+  <div class="callout"><strong>Why this arc beats the Catalan loop:</strong> sandier beaches (Atlantic dunes vs Mediterranean coves), warmer water, deeper cultural anchors, fewer crowds in Aug, and the food is on another level — pescaíto frito, tuna ronqueo, sherry from Jerez, gazpacho from the source.</div>
+  <p style="font-size:13px;color:var(--slate);"><em>Tap any image to expand. Tap the dark background to close.</em></p>
+</section>
+
+<!-- STOP 1: SEVILLA -->
+<section class="stop" id="sevilla">
+  <h2>Stop 1 · Sevilla &amp; Córdoba day trip</h2>
+  <p class="stop-meta"><strong>Jul 21 – 24 · 3 nights</strong> · Andalucía's capital · 35 min from SVQ airport · base for Córdoba day trip</p>
+
+  <img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Sevilla_Cathedral_-_Southeast.jpg" alt="Seville Cathedral and Giralda" loading="lazy">
+
+  <div class="pillrow">
+    <span class="pill culture">UNESCO Cathedral + Alcázar</span>
+    <span class="pill food">Tapas + flamenco</span>
+    <span class="pill culture">Plaza de España</span>
+    <span class="pill culture">Córdoba day trip</span>
+  </div>
+
+  <h4>Why here</h4>
+  <p>Sevilla is the cultural soul of Andalucía: Gothic cathedral with the world's largest altarpiece, Mudéjar palace gardens at the Real Alcázar (a Game of Thrones filming location), tapas alleys in Santa Cruz, and flamenco peñas with no tourist filter. July is hot — plan mornings outdoors, siesta indoors, evenings on rooftops.</p>
+
+  <div class="photo-grid four">
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Plaza_de_Espa%C3%B1a_%28Sevilla%29_-_01.jpg" alt="Plaza de España, Seville" loading="lazy">
+      <figcaption>Plaza de España · Sevilla</figcaption>
+    </figure>
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Sevilla-2-2_%2848040287512%29-edit.jpg" alt="Alcázar of Seville interior" loading="lazy">
+      <figcaption>Real Alcázar · Mudéjar palace</figcaption>
+    </figure>
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/7/73/C%C3%B3rdoba_aerial_2.jpg" alt="Córdoba aerial" loading="lazy">
+      <figcaption>Córdoba — day trip · 45 min AVE</figcaption>
+    </figure>
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Mezquita_de_C%C3%B3rdoba_desde_el_aire_%28C%C3%B3rdoba%2C_Espa%C3%B1a%29.jpg" alt="Mezquita of Córdoba" loading="lazy">
+      <figcaption>Mezquita-Cathedral · Córdoba</figcaption>
+    </figure>
+  </div>
+
+  <h4>Day by day</h4>
+
+  <div class="day">
+    <div class="head">Tue Jul 21 · Arrival</div>
+    <ul class="activities">
+      <li>Morning flight CDG → SVQ (2h45 direct on Air France, daily)</li>
+      <li>Taxi or bus EA from airport to centre (35 min, ~€25 taxi)</li>
+      <li>Check in, lunch at <em>Bar Alfalfa</em> or <em>Las Golondrinas II</em></li>
+      <li>Easy afternoon wander through Barrio Santa Cruz (the old Jewish quarter)</li>
+      <li>Sunset rooftop drinks at <em>Hotel Doña María</em> or <em>EME Catedral</em> facing the Giralda</li>
+      <li>Dinner + late flamenco at <em>Casa de la Memoria</em> (book ahead — small, intimate)</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="head">Wed Jul 22 · Cathedral + Alcázar + Plaza</div>
+    <ul class="activities">
+      <li>Early entry to <strong>Cathedral + Giralda climb</strong> (open 9am, beat the heat)</li>
+      <li>Late morning at <strong>Real Alcázar</strong> — palace + gardens (book skip-the-line online, 2h)</li>
+      <li>Long siesta lunch + nap</li>
+      <li>Late afternoon at <strong>Plaza de España</strong> — boat ride in the canal, tile murals of every Spanish province</li>
+      <li>Tapas crawl in Triana across the river — try <em>Las Golondrinas</em>, <em>Casa Cuesta</em></li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="head">Thu Jul 23 · Córdoba day trip</div>
+    <ul class="activities">
+      <li>Morning AVE Sevilla → Córdoba · 45 min · ~€20 pp</li>
+      <li><strong>Mezquita-Catedral</strong> — the breathtaking Moorish prayer hall with a cathedral grown inside it</li>
+      <li>Lunch in the Judería at <em>Casa Pepe</em> — try salmorejo (thicker, more luscious gazpacho — Córdoba's specialty)</li>
+      <li>Walk the Roman bridge over the Guadalquivir, see the Alcázar de los Reyes Cristianos</li>
+      <li>Late afternoon AVE back to Sevilla</li>
+      <li>Final dinner at <em>Mariatrifulca</em> with bridge views</li>
+    </ul>
+  </div>
+
+  <div class="transit"><strong>Fri Jul 24 — transit day:</strong> Sevilla Santa Justa → Cádiz AVE · 1h45 direct · then 45 min bus or car to Vejer de la Frontera. Total ~3h door-to-door. Tip: rent a car at Cádiz or Sevilla station — you'll want it for beach-hopping the Costa de la Luz.</div>
+</section>
+
+<!-- STOP 2: COSTA DE LA LUZ -->
+<section class="stop" id="costadelaluz">
+  <h2>Stop 2 · Costa de la Luz — Vejer base</h2>
+  <p class="stop-meta"><strong>Jul 24 – 29 · 5 nights</strong> · Atlantic coast, the wide-sandy beaches you came for · base in or near Vejer de la Frontera, day-trips to Bolonia, Zahara, Tarifa, Cádiz</p>
+
+  <img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/5/57/Beach_of_Bolonia_-_014_-_view.jpg" alt="Bolonia Beach with dunes" loading="lazy">
+
+  <div class="pillrow">
+    <span class="pill beach">Wide Atlantic dunes</span>
+    <span class="pill beach">Bolonia · Zahara · Tarifa</span>
+    <span class="pill culture">Roman ruins on the beach</span>
+    <span class="pill food">Tuna ronqueo · sherry</span>
+  </div>
+
+  <h4>Why here</h4>
+  <p>This is the <strong>sandy-beach payoff</strong>. The Atlantic coast of Cádiz province has the longest, widest, sandiest beaches in Spain — backed by pine forest and dunes, washed by Atlantic swell, refreshed by the levante and poniente winds. <strong>Bolonia</strong> has a 4-km wall of fine sand and a giant rolling dune you can climb. <strong>Zahara de los Atunes</strong> is a fishing village with a beach you can walk for an hour. <strong>Tarifa</strong> is the kitesurf capital of Europe — and you can see Morocco across the Strait of Gibraltar.</p>
+
+  <div class="photo-grid four">
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/8/85/Zahara_de_los_Atunes_vista_desde_el_cielo.jpg" alt="Zahara de los Atunes aerial" loading="lazy">
+      <figcaption>Zahara de los Atunes · the wide beach</figcaption>
+    </figure>
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Bas%C3%ADlica_Baelo_001.jpg" alt="Baelo Claudia Roman ruins" loading="lazy">
+      <figcaption>Baelo Claudia · Roman ruins on Bolonia beach</figcaption>
+    </figure>
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/3/35/Cadiz_aerea.jpg" alt="Cádiz aerial view" loading="lazy">
+      <figcaption>Cádiz — 3000-year-old port city</figcaption>
+    </figure>
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/8/80/Cadiz_playa_caleta.jpg" alt="Playa de La Caleta, Cádiz" loading="lazy">
+      <figcaption>La Caleta · the city beach in Cádiz</figcaption>
+    </figure>
+  </div>
+
+  <h4>Day by day</h4>
+
+  <div class="day">
+    <div class="head">Fri Jul 24 · Arrival + Zahara sunset</div>
+    <ul class="activities">
+      <li>Train Sevilla → Cádiz (1h45 AVE), pick up rental car or transfer to Vejer (45 min)</li>
+      <li>Settle into the Airbnb, late lunch in Vejer's main plaza</li>
+      <li>Drive 25 min to Zahara de los Atunes for first beach + sunset swim</li>
+      <li>Dinner at <em>El Campero</em> in Barbate (or <em>Almadraba</em> in Zahara) — bluefin tuna country, you're 5 min from where they catch it</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="head">Sat Jul 25 · Bolonia + Baelo Claudia</div>
+    <ul class="activities">
+      <li>20-min drive to <strong>Bolonia</strong> — park, set up on the wide sand</li>
+      <li>Beach morning + climb the giant <strong>Bolonia dune</strong> (it dwarfs the kids in photos)</li>
+      <li>Lunch at <em>Las Rejas</em> at the south end of the beach — toes-in-sand, fresh fish, gazpacho jugs</li>
+      <li>Afternoon at <strong>Baelo Claudia</strong> Roman ruins, right behind the beach — an entire Roman fish-salting town preserved, free entry for EU residents</li>
+      <li>Late swim, then back to Vejer</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="head">Sun Jul 26 · Tarifa + Africa across the Strait</div>
+    <ul class="activities">
+      <li>30-min drive to <strong>Tarifa</strong> — Europe's southernmost point on mainland</li>
+      <li>Walk through Tarifa Old Town (white-washed, mellow surfer vibe)</li>
+      <li>Lunch at <em>El Lola</em> or <em>Surla</em></li>
+      <li><strong>Option A:</strong> Beach afternoon at Punta Paloma (wide sandy bay with hot springs the locals know about) or Valdevaqueros (kitesurfer-watching)</li>
+      <li><strong>Option B:</strong> Fast ferry Tarifa → Tangier, Morocco (35 min) — one of the wildest day trips you can do anywhere. Souk, mint tea, lunch in Africa, ferry back by 7pm. Bring passports.</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="head">Mon Jul 27 · Cádiz day trip</div>
+    <ul class="activities">
+      <li>1h drive (or train Vejer-area → Cádiz) to <strong>Cádiz</strong> — 3,000-year-old port city, Phoenician + Roman + Spanish layers</li>
+      <li>Walk the seafront promenade, La Caleta beach, Castillo de San Sebastián</li>
+      <li>Cathedral with the gold dome on the seafront</li>
+      <li>Lunch at <em>Casa Manteca</em> in La Viña — the best chicharrones de Cádiz with manzanilla sherry</li>
+      <li>Back to Vejer for evening Old Town tapas crawl at <em>El Jardín del Califa</em> + <em>La Brasa de Sancho</em></li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="head">Tue Jul 28 · Slow Vejer day + Trafalgar</div>
+    <ul class="activities">
+      <li>Sleep in. Breakfast in Vejer's plaza</li>
+      <li>Late morning walk to <strong>Cabo de Trafalgar lighthouse</strong> (where the 1805 battle happened)</li>
+      <li>Beach at El Palmar (long sandy, surfer-friendly) or back to Bolonia for round 2</li>
+      <li>Sunset at the lighthouse — bring wine</li>
+    </ul>
+  </div>
+
+  <div class="transit"><strong>Wed Jul 29 — transit day:</strong> Vejer → Ronda · bus is the best path (~2h direct on ALSA / Comes), or train via Algeciras (~3h with change). If you've got the rental car, the 2h drive through olive country is the scenic move. Drop the car in Ronda.</div>
+</section>
+
+<!-- STOP 3: RONDA + GRAZALEMA -->
+<section class="stop" id="ronda">
+  <h2>Stop 3 · Ronda &amp; Sierra de Grazalema</h2>
+  <p class="stop-meta"><strong>Jul 29 – Aug 1 · 3 nights</strong> · Cliffside city + Pueblos Blancos + Mediterranean mountain hikes</p>
+
+  <img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/0/00/Ronda_aerial.jpg" alt="Ronda Puente Nuevo and gorge" loading="lazy">
+
+  <div class="pillrow">
+    <span class="pill culture">Puente Nuevo + El Tajo gorge</span>
+    <span class="pill culture">Pueblos Blancos</span>
+    <span class="pill hike">Sierra de Grazalema</span>
+    <span class="pill food">Bull-ring + bodegas</span>
+  </div>
+
+  <h4>Why here</h4>
+  <p>Ronda is the most dramatic city in Spain — a white-washed town split by the 100-metre <strong>El Tajo gorge</strong> with the iconic Puente Nuevo bridge spanning it. Hemingway and Orson Welles both loved it; the bullring is Spain's oldest. Use Ronda as a base for the <strong>Pueblos Blancos</strong> (Setenil de las Bodegas, Grazalema, Zahara de la Sierra, Arcos de la Frontera) and the <strong>Sierra de Grazalema Natural Park</strong> — a limestone range full of cork-oak forest, vulture vistas, and Mediterranean hiking that's easier on kids than the Pyrenees.</p>
+
+  <div class="photo-grid">
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Setenil_de_las_Bodegas_-_Wallpaper.jpg" alt="Setenil de las Bodegas houses under rock" loading="lazy">
+      <figcaption>Setenil de las Bodegas · houses tucked under cliff overhangs</figcaption>
+    </figure>
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/8/81/TejadosGrazalema.jpg" alt="Grazalema rooftops" loading="lazy">
+      <figcaption>Grazalema · whitewashed village in the sierra</figcaption>
+    </figure>
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Arcos_de_la_Frontera_-_001_%2830591512202%29.jpg" alt="Arcos de la Frontera aerial" loading="lazy">
+      <figcaption>Arcos de la Frontera · the most dramatic of the white villages</figcaption>
+    </figure>
+  </div>
+
+  <h4>Day by day</h4>
+
+  <div class="day">
+    <div class="head">Wed Jul 29 · Arrival + Puente Nuevo at sunset</div>
+    <ul class="activities">
+      <li>Arrive Ronda, settle in</li>
+      <li>Late afternoon stroll across the <strong>Puente Nuevo</strong>, descend to the viewpoint below for the iconic photograph</li>
+      <li>Visit the <strong>Plaza de Toros</strong> (Spain's oldest bullring, now mostly a museum)</li>
+      <li>Dinner at <em>Bardal</em> (Michelin) or the more casual <em>Tragatá</em> by chef Benito Gómez</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="head">Thu Jul 30 · Pueblos Blancos circuit</div>
+    <ul class="activities">
+      <li>Rent or use the car: half-day loop through three white villages</li>
+      <li><strong>Setenil de las Bodegas</strong> — houses literally built into and under the cliff overhangs, eat lunch on a street that runs <em>through</em> the rock</li>
+      <li><strong>Zahara de la Sierra</strong> — perched above an emerald reservoir, swim in the lake below if hot</li>
+      <li><strong>Grazalema village</strong> — the rooftops, the embutidos shops, the cork forest viewpoints</li>
+      <li>Back to Ronda for evening tapas</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="head">Fri Jul 31 · Sierra de Grazalema hike day</div>
+    <ul class="activities">
+      <li>30 min drive to the <strong>Sierra de Grazalema Natural Park</strong></li>
+      <li><strong>Easy family hike:</strong> Río Majaceite trail (Benamahoma → El Bosque, 4.5 km along a river, mostly flat, shaded)</li>
+      <li><strong>Moderate:</strong> Salto del Cabrero loop — limestone cliffs, vulture vistas (12 km, half-day, kids 10+ ok)</li>
+      <li><strong>Ambitious:</strong> El Torreón summit — Cádiz province's highest peak at 1,654m (permit required, book ahead at the visitor centre)</li>
+      <li>Lunch in El Bosque or Benamahoma at a venta — try the local trout, fresh from the river</li>
+      <li>Final dinner back in Ronda at <em>Pedro Romero</em> opposite the bullring</li>
+    </ul>
+  </div>
+
+  <div class="transit"><strong>Sat Aug 1 — exit:</strong> Train Ronda → Sevilla Santa Justa (~2h direct) · transfer to Sevilla SVQ airport (20 min) · fly SVQ → CDG (2h45 direct AF). Total ~5–6h with airport time. Aug 1–2 at sister's in Paris, Aug 3 CDG → KRK as planned.</div>
+</section>
+
+<!-- LOGISTICS -->
+<section id="logistics">
+  <h2>Logistics &amp; bookings</h2>
+
+  <h3>Flights</h3>
+  <ul class="notes">
+    <li>CDG → SVQ (Jul 21) · Air France direct · ~$180 pp · ~$900 family one-way · 2h45</li>
+    <li>SVQ → CDG (Aug 1) · same · ~$900 family one-way</li>
+    <li><strong>Total flights:</strong> ~$1,800 CAD round trip — vs $2,406 for the original CDG↔HER</li>
+  </ul>
+
+  <h3>Trains + buses</h3>
+  <p>Book all rail legs on <a href="https://www.renfe.com/es/en" class="btn secondary">Renfe</a>. Bus legs on <a href="https://www.alsa.com/en/" class="btn secondary">ALSA</a> or <a href="https://tgcomes.es" class="btn secondary">Comes</a>.</p>
+  <ul class="notes">
+    <li>Sevilla → Córdoba day trip (AVE): ~€20 pp RT · €100 family</li>
+    <li>Sevilla → Cádiz (AVE): ~€25 pp · €125 family one-way</li>
+    <li>Vejer → Ronda (bus, ALSA): ~€18 pp · €90 family</li>
+    <li>Ronda → Sevilla (Renfe Media Distancia): ~€20 pp · €100 family</li>
+    <li><strong>Total ground transport:</strong> ~€415 / ~$615 CAD</li>
+  </ul>
+
+  <h3>Rental car (recommended for Stop 2)</h3>
+  <p>The Costa de la Luz beaches aren't reachable by train — buses run but rigid. Pick up a 7-seater at Cádiz station or Sevilla airport on arrival, drop in Ronda. ~€300–500 for 5 days.</p>
+  <a class="btn" href="https://www.discovercars.com">Discover Cars — compare</a>
+  <a class="btn olive" href="https://www.autoeurope.com">AutoEurope</a>
+
+  <h3>Must-book-ahead</h3>
+  <ul class="notes">
+    <li><a href="https://www.alcazarsevilla.org/">Real Alcázar Sevilla</a> — book 2 weeks ahead, sells out</li>
+    <li><a href="https://www.catedraldesevilla.es/">Cathedral + Giralda</a> — online tickets</li>
+    <li><a href="https://mezquita-catedraldecordoba.es/">Mezquita Córdoba</a> — book online</li>
+    <li>Flamenco show — <a href="https://casadelamemoria.es/">Casa de la Memoria</a></li>
+    <li>Tarifa-Tangier ferry — <a href="https://www.frs.es/">FRS</a> (book day-of or 1 day ahead)</li>
+  </ul>
+
+  <h3>Airbnbs — browse live</h3>
+  <p>Will pull verified 3BR options once you lock this arc.</p>
+  <a class="btn" href="https://www.airbnb.com/s/Seville--Spain/homes?check_in=2026-07-21&check_out=2026-07-24&adults=4&children=1&min_bedrooms=3">Browse Sevilla 3BR</a>
+  <a class="btn" href="https://www.airbnb.com/s/Vejer-de-la-Frontera--Spain/homes?check_in=2026-07-24&check_out=2026-07-29&adults=4&children=1&min_bedrooms=3">Browse Vejer 3BR+pool</a>
+  <a class="btn" href="https://www.airbnb.com/s/Ronda--Spain/homes?check_in=2026-07-29&check_out=2026-08-01&adults=4&children=1&min_bedrooms=3">Browse Ronda 3BR</a>
+</section>
+
+<div class="footnote">
+Generated 2026-05-13 by Morgan · v4 itinerary for the Andalucía Arc · all image URLs use Wikimedia Commons originals (verified loading in Chrome) · click any image to expand · tap dark background to close
+</div>
+
+</div>
+
+<!-- Lightbox overlay -->
+<div id="lb">
+  <span class="close-hint">×</span>
+  <img src="" alt="">
+</div>
+
+<script>
+(function() {
+  var lb = document.getElementById('lb');
+  var lbImg = lb.querySelector('img');
+  document.querySelectorAll('img[data-lightbox]').forEach(function(img) {
+    img.addEventListener('click', function(e) {
+      lbImg.src = img.src;
+      lbImg.alt = img.alt || '';
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  lb.addEventListener('click', function() {
+    lb.classList.remove('active');
+    lbImg.src = '';
+    document.body.style.overflow = '';
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lb.classList.contains('active')) {
+      lb.classList.remove('active');
+      lbImg.src = '';
+      document.body.style.overflow = '';
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
