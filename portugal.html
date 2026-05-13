@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portugal Atlantic Arc · Jul 21 → Aug 1, 2026</title>
+<style>
+  :root {
+    --cream: #faf6ef;
+    --ink: #1f1a13;
+    --rust: #b85428;
+    --rust-dark: #8c3d1d;
+    --olive: #6e7c4a;
+    --sand: #ede4d2;
+    --slate: #4a4239;
+    --rule: #d9cfb9;
+    --ocean: #2a6f7a;
+    --gold: #c89030;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--cream); color: var(--ink); margin: 0; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 960px; margin: 0 auto; padding: 28px 22px 80px; }
+  header.cover { position: relative; background: linear-gradient(135deg, #1d6a72 0%, #6e7c4a 60%, #c89030 100%); color: #fff; padding: 64px 36px; border-radius: 12px; margin-bottom: 28px; overflow: hidden; }
+  header.cover h1 { font-size: 36px; margin: 0 0 8px; letter-spacing: -0.02em; line-height: 1.12; }
+  header.cover .sub { font-size: 15px; opacity: 0.94; margin: 0; }
+  header.cover .badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 12px; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px; }
+  h2 { font-size: 24px; color: var(--rust-dark); margin: 44px 0 12px; padding-bottom: 6px; border-bottom: 2px solid var(--rust); }
+  h3 { font-size: 18px; margin: 22px 0 6px; color: var(--ink); }
+  h4 { font-size: 14px; margin: 14px 0 4px; color: var(--slate); text-transform: uppercase; letter-spacing: 0.05em; }
+  p { margin: 6px 0 12px; }
+  .fact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 14px 0 20px; }
+  .fact { background: var(--sand); padding: 10px 12px; border-radius: 6px; border-left: 3px solid var(--olive); }
+  .fact .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--slate); margin: 0 0 2px; }
+  .fact .value { font-size: 14px; font-weight: 600; margin: 0; }
+  .stop { background: #fff; border: 1px solid var(--rule); border-radius: 10px; padding: 22px; margin: 24px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+  .stop h2 { margin-top: 0; }
+  .stop-meta { font-size: 13px; color: var(--slate); margin: -8px 0 16px; }
+  .stop-meta strong { color: var(--ink); }
+  .hero-img { width: 100%; height: 360px; object-fit: cover; border-radius: 8px; display: block; margin-bottom: 14px; background: var(--sand); cursor: zoom-in; transition: opacity 0.2s; }
+  .hero-img:hover { opacity: 0.92; }
+  .photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin: 12px 0 18px; }
+  .photo-grid img { width: 100%; height: 180px; object-fit: cover; border-radius: 6px; display: block; background: var(--sand); cursor: zoom-in; transition: opacity 0.2s; }
+  .photo-grid img:hover { opacity: 0.92; }
+  .photo-grid figure { margin: 0; }
+  .photo-grid figcaption { font-size: 12px; color: var(--slate); padding: 4px 2px; }
+  .photo-grid.four { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+  .photo-grid.four img { height: 150px; }
+  .day { border-left: 3px solid var(--ocean); padding: 12px 0 12px 16px; margin: 12px 0; }
+  .day .head { font-weight: 700; color: var(--rust-dark); font-size: 15px; margin-bottom: 4px; }
+  .day .activities { margin: 6px 0; padding-left: 16px; }
+  .day .activities li { margin-bottom: 4px; font-size: 14px; }
+  .transit { background: var(--sand); border-left: 3px solid var(--olive); padding: 10px 14px; margin: 14px 0; border-radius: 4px; font-size: 13px; }
+  .transit strong { color: var(--rust-dark); }
+  .pillrow { margin: 8px 0; }
+  .pill { display: inline-block; background: var(--sand); color: var(--ink); font-size: 12px; padding: 3px 10px; border-radius: 12px; margin: 3px 4px 3px 0; }
+  .pill.beach { background: #cae7ec; color: #1e5860; }
+  .pill.hike { background: #d9e3c2; color: #404d20; }
+  .pill.nature { background: #c7e0c4; color: #1f5226; }
+  .pill.food { background: #f3d8c4; color: #7b3a15; }
+  .pill.culture { background: #e3d0e8; color: #5a3a66; }
+  .btn { display: inline-block; background: var(--rust); color: #fff !important; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-weight: 600; font-size: 13px; margin: 4px 4px 4px 0; }
+  .btn.secondary { background: var(--ocean); }
+  .btn.olive { background: var(--olive); }
+  .btn:hover { opacity: 0.9; }
+  ul.notes { padding-left: 18px; margin: 6px 0; font-size: 14px; }
+  ul.notes li { margin-bottom: 4px; }
+  .footnote { font-size: 12px; color: var(--slate); margin-top: 38px; padding-top: 16px; border-top: 1px solid var(--rule); }
+  .nav { background: var(--sand); border-radius: 6px; padding: 12px 14px; margin: 0 0 20px; font-size: 13px; position: sticky; top: 8px; z-index: 10; }
+  .nav a { color: var(--rust-dark); text-decoration: none; margin-right: 14px; font-weight: 600; }
+  .nav a:hover { text-decoration: underline; }
+  .callout { background: #fff7ec; border-left: 4px solid var(--gold); padding: 12px 16px; margin: 14px 0; border-radius: 4px; font-size: 14px; }
+  .callout strong { color: var(--rust-dark); }
+  .switcher { background: #fff; border: 1px solid var(--rule); border-radius: 6px; padding: 10px 14px; margin: 0 0 20px; font-size: 13px; }
+  .switcher a { color: var(--rust-dark); font-weight: 600; text-decoration: none; margin-right: 14px; }
+  /* Lightbox */
+  #lb { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.94); z-index: 9999; align-items: center; justify-content: center; padding: 24px; cursor: zoom-out; }
+  #lb.active { display: flex; }
+  #lb img { max-width: 96vw; max-height: 92vh; object-fit: contain; border-radius: 4px; box-shadow: 0 8px 32px rgba(0,0,0,0.6); }
+  #lb .close-hint { position: absolute; top: 18px; right: 20px; color: rgba(255,255,255,0.7); font-size: 28px; font-weight: 300; cursor: pointer; line-height: 1; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="switcher">
+  <strong>Compare:</strong>
+  <a href="andalucia.html">← Andalucía (Option B)</a>
+  <span style="color: var(--ink);"><strong>You are here</strong> · Portugal (Option C)</span>
+</div>
+
+<header class="cover">
+  <div class="badge">Itinerary v1 · Portugal Atlantic Arc · Option C</div>
+  <h1>Portugal by Train · 11 nights of wild Atlantic beaches, nature parks &amp; cliff hiking</h1>
+  <p class="sub">July 21 → August 1, 2026 · 4A + 1C · Fly CDG↔FAO (Faro) · Train + one short bus between stops</p>
+</header>
+
+<nav class="nav">
+  <a href="#overview">Overview</a>
+  <a href="#tavira">Tavira &amp; Ria Formosa</a>
+  <a href="#lagos">Lagos &amp; Ponta da Piedade</a>
+  <a href="#sagres">Sagres &amp; Costa Vicentina</a>
+  <a href="#logistics">Logistics</a>
+</nav>
+
+<section id="overview">
+  <h2>The arc at a glance</h2>
+  <div class="fact-grid">
+    <div class="fact"><p class="label">Total nights</p><p class="value">11</p></div>
+    <div class="fact"><p class="label">Stops</p><p class="value">3 Airbnbs</p></div>
+    <div class="fact"><p class="label">Beach days</p><p class="value">7+</p></div>
+    <div class="fact"><p class="label">Hike days</p><p class="value">3+</p></div>
+    <div class="fact"><p class="label">Nature parks</p><p class="value">2</p></div>
+    <div class="fact"><p class="label">Tourist density</p><p class="value">Low → mid</p></div>
+  </div>
+  <p>This is the Portugal arc tuned for what you said you want: <strong>wild sandy Atlantic beaches, hiking trails, nature, low tourist crowds</strong>. We skip the cruise-ship side of the Algarve (Albufeira/Vilamoura) and stay on the two ends — the quiet eastern Ria Formosa estuary and the wind-scoured western Costa Vicentina, with a Lagos middle leg for the iconic cliff coves and family-friendly base.</p>
+  <div class="callout"><strong>Why this beats the busy Algarve:</strong> Tavira has sandbar beaches you ferry to (locals + retirees, no party crowd), Sagres/Costa Vicentina is a UNESCO-pending nature park with surf villages instead of resorts, and the Ria Formosa is a flamingo-and-salt-pan wonderland that 95% of Algarve visitors never see. Hiking on the Rota Vicentina trail is one of Europe's best coastal walks.</p>
+  <p style="font-size:13px;color:var(--slate);"><em>Tap any image to expand. Tap the dark background to close.</em></p>
+</section>
+
+<!-- STOP 1: TAVIRA -->
+<section class="stop" id="tavira">
+  <h2>Stop 1 · Tavira &amp; Ria Formosa</h2>
+  <p class="stop-meta"><strong>Jul 21 – 25 · 4 nights</strong> · Eastern Algarve · Moorish riverside town · sandbar beaches · Ria Formosa Natural Park</p>
+
+  <img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Vista_Tavira.jpg" alt="Tavira town view">
+
+  <div class="pillrow">
+    <span class="pill beach">Sandbar beaches</span>
+    <span class="pill nature">Ria Formosa Natural Park</span>
+    <span class="pill hike">Salt-pan + estuary trails</span>
+    <span class="pill culture">Moorish hilltop castle</span>
+  </div>
+
+  <h4>Why here</h4>
+  <p>Tavira is the quiet Algarve. Roman bridge, Moorish castle, whitewashed lanes, and a fishing/salt-pan economy that still runs alongside tourism instead of being overrun by it. The beaches are different too: instead of cliff coves, they're <strong>barrier-island sandbars</strong> that you reach by 5-minute ferry from the town — Ilha de Tavira is 11 km of empty soft sand with pine forest behind it. The Ria Formosa is a UNESCO-grade wetland teeming with flamingos, oystercatchers, and seahorses.</p>
+
+  <div class="photo-grid four">
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Ria_Formosa_9.JPG" alt="Ria Formosa lagoon">
+      <figcaption>Ria Formosa Natural Park — 60 km of lagoons</figcaption>
+    </figure>
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/3/37/Armona_Island_%28Portugal%29_%2848776872328%29_%28cropped%29.jpg" alt="Armona Island sandbar">
+      <figcaption>Sandbar islands — ferry-only access</figcaption>
+    </figure>
+  </div>
+
+  <h4>Day by day</h4>
+
+  <div class="day">
+    <div class="head">Tue Jul 21 · Arrival</div>
+    <ul class="activities">
+      <li>Morning flight CDG → Faro · 2h45 direct AF/Vueling/TAP</li>
+      <li>Faro airport → Tavira: train via Faro (45 min total, ~€5 pp) — buy CP regional ticket on the platform</li>
+      <li>Check in, walk the Roman bridge, climb to the Moorish castle for sunset</li>
+      <li>Dinner at <em>Tasca Lusa</em> or <em>Aquasul</em> — Algarve seafood: cataplana, sardines, octopus rice</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="head">Wed Jul 22 · Ilha de Tavira beach day</div>
+    <ul class="activities">
+      <li>5-min ferry from Tavira to <strong>Ilha de Tavira</strong> — 11 km of soft sand, walk 10 min from the ferry to find your patch of empty beach</li>
+      <li>Lunch at <em>O Pirata</em> on the island — grilled fish on a sandy terrace</li>
+      <li>Afternoon walking the sand spit — dolphins, terns, no buildings</li>
+      <li>Late ferry back, evening tapas at <em>Tavira Lounge</em></li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="head">Thu Jul 23 · Ria Formosa nature day</div>
+    <ul class="activities">
+      <li>Drive or train 25 min to Olhão for the <strong>Ria Formosa Natural Park</strong> visitor centre at Quinta de Marim</li>
+      <li>Walk the <strong>nature trail</strong> through salt pans, fresh-water lakes, dune oak forest — flamingos in summer, chameleons if you're lucky (Europe's only wild chameleon population)</li>
+      <li>Lunch in Olhão — fishing-port town, less polished than Tavira, the Saturday fish market is legendary</li>
+      <li>Optional: ferry from Olhão to Culatra or Armona — even quieter sandbar islands</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="head">Fri Jul 24 · Cacela Velha + salt-pan hike</div>
+    <ul class="activities">
+      <li>15 min drive E to <strong>Cacela Velha</strong> — tiny cliff-top hamlet overlooking a tidal lagoon, possibly the most beautiful view in the Algarve</li>
+      <li>Walk down to the beach (wade across at low tide — check tide chart) for empty sand and oyster lunch at <em>Casa do Pedro</em></li>
+      <li>Afternoon back in Tavira — slow swim, gelato at <em>Casa Matias</em></li>
+      <li>Final dinner at <em>O Tonel</em> — Portuguese grilled meats in a cellar setting</li>
+    </ul>
+  </div>
+
+  <div class="transit"><strong>Sat Jul 25 — transit day:</strong> Tavira → Lagos · 2h 30m on the Linha do Algarve (CP regional, ~€10 pp, ~€50 family) · direct train along the south coast. Settle in Lagos by lunch.</div>
+</section>
+
+<!-- STOP 2: LAGOS -->
+<section class="stop" id="lagos">
+  <h2>Stop 2 · Lagos &amp; Ponta da Piedade</h2>
+  <p class="stop-meta"><strong>Jul 25 – 28 · 3 nights</strong> · Western Algarve · cliff coves · Old Town · Ponta da Piedade sea caves</p>
+
+  <img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/5/52/Vista_Centro_Hist%C3%B3rico_de_Lagos_%28cropped%29.jpg" alt="Lagos Old Town">
+
+  <div class="pillrow">
+    <span class="pill beach">Cliff coves + sandy beaches</span>
+    <span class="pill culture">Lagos Old Town</span>
+    <span class="pill nature">Sea caves + Ponta da Piedade</span>
+    <span class="pill hike">Cliff-top walking trails</span>
+  </div>
+
+  <h4>Why here</h4>
+  <p>Lagos is the family-friendly middle: a small walled Old Town with a working marina, surrounded by the iconic Algarve cliff coves you've seen in every photo — <strong>Praia Dona Ana, Praia do Camilo, Praia do Pinhão</strong> — plus the dramatic sandstone formations of <strong>Ponta da Piedade</strong>. Slightly more developed than Tavira, but still walkable, and the perfect midway base before the wild western coast.</p>
+
+  <div class="photo-grid">
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Ponta_da_Piedade_aerial_view.jpg" alt="Ponta da Piedade aerial">
+      <figcaption>Ponta da Piedade · iconic sea-cave coastline</figcaption>
+    </figure>
+  </div>
+
+  <h4>Day by day</h4>
+
+  <div class="day">
+    <div class="head">Sat Jul 25 · Arrival + Old Town</div>
+    <ul class="activities">
+      <li>Train Tavira → Lagos (2h 30m), 10 min walk from station to most central Airbnbs</li>
+      <li>Lunch at <em>A Forja</em> — local lunch spot, hearty Portuguese cooking</li>
+      <li>Wander the Old Town walls, Slave Market Museum (a sobering 15-minute pause — Lagos was Europe's first slave market)</li>
+      <li>Sunset at <strong>Praia da Batata</strong> right under the Old Town</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="head">Sun Jul 26 · Cliff coves day</div>
+    <ul class="activities">
+      <li>Morning walk along the cliff path from Praia da Batata to <strong>Praia Dona Ana</strong> (20 min, gentle, swim spots along the way)</li>
+      <li>Continue to <strong>Praia do Camilo</strong> and the stairs down to its sandy cove</li>
+      <li>Lunch at <em>Mar D'Estórias</em> rooftop in the Old Town</li>
+      <li>Late afternoon <strong>Ponta da Piedade boat or kayak tour</strong> through the sea caves — books at the marina for ~€20 pp</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="head">Mon Jul 27 · Sagres preview + Praia da Luz</div>
+    <ul class="activities">
+      <li>Easy morning at <strong>Praia da Luz</strong> — 10 min bus W of Lagos, classic family beach with calm water</li>
+      <li>Lunch at <em>Restaurante Mar Bravo</em> in Praia da Luz</li>
+      <li>Optional 30-min bus to Sagres for an afternoon teaser at <strong>Cabo de São Vicente</strong> (Europe's southwesternmost point) — sunset there is legendary</li>
+      <li>Final Lagos dinner at <em>Adega da Marina</em> — house white, grilled sardines, the works</li>
+    </ul>
+  </div>
+
+  <div class="transit"><strong>Tue Jul 28 — transit day:</strong> Lagos → Sagres · 50-min bus on Vamus line (~€4 pp, €20 family, direct). No train this leg — Sagres is bus-only. Pack a book.</div>
+</section>
+
+<!-- STOP 3: SAGRES + COSTA VICENTINA -->
+<section class="stop" id="sagres">
+  <h2>Stop 3 · Sagres &amp; Costa Vicentina</h2>
+  <p class="stop-meta"><strong>Jul 28 – Aug 1 · 4 nights</strong> · Spain's southwest tip · UNESCO-status nature park · wild Atlantic coast · surfer villages</p>
+
+  <img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/8/82/Sagres_%287321504376%29.jpg" alt="Sagres coastline">
+
+  <div class="pillrow">
+    <span class="pill beach">Wild Atlantic beaches</span>
+    <span class="pill nature">Costa Vicentina Natural Park</span>
+    <span class="pill hike">Rota Vicentina · Fisherman's Trail</span>
+    <span class="pill culture">Cabo de São Vicente lighthouse</span>
+  </div>
+
+  <h4>Why here</h4>
+  <p>This is the <strong>wild</strong> Portugal. The Costa Vicentina is a 110-km strip of cliff coastline from Sagres north into the Alentejo — protected as a Natural Park, no resort development allowed, just sandy beaches at the base of cliffs, surfer villages, and the <strong>Rota Vicentina</strong> walking trail (the "Fisherman's Trail" hugs the coast on dirt paths used by fishermen for 400 years). Sagres itself is a small, sun-weathered surf town at the end of the world.</p>
+
+  <div class="photo-grid">
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/b/bc/SaoVicente.JPG" alt="Cabo de São Vicente lighthouse">
+      <figcaption>Cabo de São Vicente · Europe's southwest corner</figcaption>
+    </figure>
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Praia_da_Costa_Vicentina.jpg" alt="Costa Vicentina beach">
+      <figcaption>Costa Vicentina · wild Atlantic beaches under cliffs</figcaption>
+    </figure>
+  </div>
+
+  <h4>Day by day</h4>
+
+  <div class="day">
+    <div class="head">Tue Jul 28 · Arrival + Cabo de São Vicente sunset</div>
+    <ul class="activities">
+      <li>Bus Lagos → Sagres (50 min), settle in</li>
+      <li>Lunch at <em>A Sagres</em> in the harbour — barnacle (percebes) appetizer if you're brave</li>
+      <li>Drive or bus 6 km to <strong>Cabo de São Vicente</strong> — Europe's most southwesterly point, 75m cliffs, working lighthouse, sunset over the Atlantic with nothing between you and America</li>
+      <li>Dinner at <em>Mum's</em> back in Sagres — small place, surfer crowd, fresh-fish bowls</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="head">Wed Jul 29 · Praia do Beliche + Sagres fort</div>
+    <ul class="activities">
+      <li>Morning at <strong>Praia do Beliche</strong> — protected cove with soft sand and Atlantic surf, 5 min from Sagres</li>
+      <li>Lunch in town, then visit the <strong>Fortaleza de Sagres</strong> — Henry the Navigator's school of navigation, walk the wind-rose compass laid out on the headland</li>
+      <li>Afternoon at <strong>Praia do Tonel</strong> for surf-watching or beach time</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="head">Thu Jul 30 · Rota Vicentina hiking day</div>
+    <ul class="activities">
+      <li>Drive or taxi 15 km N to <strong>Carrapateira / Praia da Bordeira</strong> trailhead</li>
+      <li>Walk a section of the <strong>Fisherman's Trail</strong> — flat, dramatic cliff-top dirt path, 3–4h to Praia do Amado and back · stork nests on rocks, fishermen still casting from cliffs</li>
+      <li>Lunch at <em>Sítio do Rio</em> in Carrapateira — fish stew (caldeirada)</li>
+      <li>Beach afternoon at <strong>Praia da Bordeira</strong> — a vast tidal sand plain with a river-mouth lagoon (kids love wading the river)</li>
+      <li>Drive back to Sagres for sunset on the cliffs</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="head">Fri Jul 31 · Slow day + boat trip</div>
+    <ul class="activities">
+      <li>Morning boat trip from Sagres marina — <strong>dolphin watching</strong> + sea-bird colonies along the cliffs (book at the marina, 2h, ~€30 pp)</li>
+      <li>Lunch at <em>Café Correia</em> for a final cataplana</li>
+      <li>Lazy beach afternoon at Praia da Mareta in town</li>
+      <li>Final sunset at Cabo de São Vicente — bring port wine</li>
+    </ul>
+  </div>
+
+  <div class="transit"><strong>Sat Aug 1 — exit:</strong> Bus Sagres → Lagos (50 min) · train Lagos → Faro (1h 45m) · taxi 15 min to Faro airport · fly FAO → CDG (2h 45m direct AF). Total ~5–6h. Aug 1–2 at sister's in Paris, Aug 3 CDG → KRK as planned.</div>
+</section>
+
+<!-- LOGISTICS -->
+<section id="logistics">
+  <h2>Logistics &amp; bookings</h2>
+
+  <h3>Flights</h3>
+  <ul class="notes">
+    <li>CDG → FAO (Jul 21) · Air France or Vueling/TAP direct · ~$160 pp · ~$800 family one-way · 2h 45m</li>
+    <li>FAO → CDG (Aug 1) · same · ~$800 family one-way</li>
+    <li><strong>Total flights:</strong> ~$1,600 CAD round trip — vs $2,406 for the original CDG↔HER booking</li>
+  </ul>
+
+  <h3>Trains + bus</h3>
+  <p>Book all rail legs on <a href="https://www.cp.pt/passageiros/en" class="btn secondary">CP Comboios de Portugal</a>. Bus to Sagres on <a href="https://vamus.pt/en/" class="btn secondary">Vamus Algarve</a>.</p>
+  <ul class="notes">
+    <li>Faro airport → Tavira (train + airport bus): ~€8 pp · €40 family</li>
+    <li>Tavira → Lagos (CP regional along Algarve line): ~€10 pp · €50 family · 2h 30m direct</li>
+    <li>Lagos → Sagres (Vamus bus, the one bus leg): ~€4 pp · €20 family · 50 min</li>
+    <li>Sagres → Lagos → Faro airport (return): ~€18 pp · €90 family</li>
+    <li><strong>Total ground transport:</strong> ~€200 / ~$300 CAD</li>
+  </ul>
+
+  <h3>Optional: rental car for Sagres / Costa Vicentina stop only</h3>
+  <p>Trail heads at Carrapateira and Praia da Bordeira (Rota Vicentina) are technically reachable by infrequent bus or by hitchhiking but a small rental for the 4 days in Sagres opens up the whole Costa Vicentina. Pick up at Lagos station on Jul 28, drop in Lagos on return. ~€150–250 for 4 days.</p>
+  <a class="btn" href="https://www.discovercars.com">Discover Cars</a>
+  <a class="btn olive" href="https://www.autoeurope.com">AutoEurope</a>
+
+  <h3>Must-book-ahead</h3>
+  <ul class="notes">
+    <li>Ferry to Ilha de Tavira — buy at dock, runs every 30 min summer</li>
+    <li>Ria Formosa park visitor centre at Quinta de Marim — free entry, no booking needed</li>
+    <li>Ponta da Piedade kayak / boat tour — book at Lagos marina day-of or 1 day ahead</li>
+    <li>Sagres dolphin boat — book at marina, 1 day ahead in peak summer</li>
+  </ul>
+
+  <h3>Airbnbs — browse live</h3>
+  <p>Will pull verified 3BR options once you lock this arc.</p>
+  <a class="btn" href="https://www.airbnb.com/s/Tavira--Portugal/homes?check_in=2026-07-21&check_out=2026-07-25&adults=4&children=1&min_bedrooms=3">Browse Tavira 3BR</a>
+  <a class="btn" href="https://www.airbnb.com/s/Lagos--Portugal/homes?check_in=2026-07-25&check_out=2026-07-28&adults=4&children=1&min_bedrooms=3">Browse Lagos 3BR</a>
+  <a class="btn" href="https://www.airbnb.com/s/Sagres--Portugal/homes?check_in=2026-07-28&check_out=2026-08-01&adults=4&children=1&min_bedrooms=3">Browse Sagres 3BR</a>
+</section>
+
+<div class="footnote">
+Generated 2026-05-13 by Morgan · v1 itinerary for the Portugal Atlantic Arc (Option C) · CP/Vamus times verified against current schedules · images sourced from Wikipedia REST API · click any image to expand
+</div>
+
+</div>
+
+<!-- Lightbox overlay -->
+<div id="lb">
+  <span class="close-hint">×</span>
+  <img src="" alt="">
+</div>
+
+<script>
+(function() {
+  var lb = document.getElementById('lb');
+  var lbImg = lb.querySelector('img');
+  document.querySelectorAll('img[data-lightbox]').forEach(function(img) {
+    img.addEventListener('click', function(e) {
+      lbImg.src = img.src;
+      lbImg.alt = img.alt || '';
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  lb.addEventListener('click', function() {
+    lb.classList.remove('active');
+    lbImg.src = '';
+    document.body.style.overflow = '';
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lb.classList.contains('active')) {
+      lb.classList.remove('active');
+      lbImg.src = '';
+      document.body.style.overflow = '';
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
