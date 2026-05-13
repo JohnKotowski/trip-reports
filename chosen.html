@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chosen Arc · Tavira → Lagos → Cádiz · Jul 21 → Aug 1, 2026</title>
+<style>
+  :root { --cream:#faf6ef; --ink:#1f1a13; --rust:#b85428; --rust-dark:#8c3d1d; --olive:#6e7c4a; --sand:#ede4d2; --slate:#4a4239; --rule:#d9cfb9; --ocean:#2a6f7a; --gold:#c89030; }
+  * { box-sizing: border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; background:var(--cream); color:var(--ink); margin:0; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  .container { max-width:960px; margin:0 auto; padding:28px 22px 80px; }
+  header.cover { background:linear-gradient(135deg,#2a6f7a 0%,#c89030 60%,#c75a30 100%); color:#fff; padding:64px 36px; border-radius:12px; margin-bottom:28px; }
+  header.cover h1 { font-size:36px; margin:0 0 8px; letter-spacing:-0.02em; line-height:1.12; }
+  header.cover .sub { font-size:15px; opacity:0.94; margin:0; }
+  header.cover .badge { display:inline-block; background:rgba(255,255,255,0.2); padding:4px 10px; border-radius:12px; font-size:12px; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:14px; }
+  h2 { font-size:24px; color:var(--rust-dark); margin:44px 0 12px; padding-bottom:6px; border-bottom:2px solid var(--rust); }
+  h3 { font-size:18px; margin:22px 0 6px; color:var(--ink); }
+  h4 { font-size:14px; margin:14px 0 4px; color:var(--slate); text-transform:uppercase; letter-spacing:0.05em; }
+  p { margin:6px 0 12px; }
+  .fact-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:10px; margin:14px 0 20px; }
+  .fact { background:var(--sand); padding:10px 12px; border-radius:6px; border-left:3px solid var(--olive); }
+  .fact .label { font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--slate); margin:0 0 2px; }
+  .fact .value { font-size:14px; font-weight:600; margin:0; }
+  .stop { background:#fff; border:1px solid var(--rule); border-radius:10px; padding:22px; margin:24px 0; box-shadow:0 2px 6px rgba(0,0,0,0.04); }
+  .stop h2 { margin-top:0; }
+  .stop-meta { font-size:13px; color:var(--slate); margin:-8px 0 16px; }
+  .stop-meta strong { color:var(--ink); }
+  .hero-img { width:100%; height:340px; object-fit:cover; border-radius:8px; display:block; margin-bottom:14px; background:var(--sand); cursor:zoom-in; transition:opacity 0.2s; }
+  .hero-img:hover { opacity:0.92; }
+  .photo-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:10px; margin:12px 0 18px; }
+  .photo-grid img { width:100%; height:180px; object-fit:cover; border-radius:6px; display:block; background:var(--sand); cursor:zoom-in; transition:opacity 0.2s; }
+  .photo-grid img:hover { opacity:0.92; }
+  .photo-grid figure { margin:0; }
+  .photo-grid figcaption { font-size:12px; color:var(--slate); padding:4px 2px; }
+  .transit { background:var(--sand); border-left:3px solid var(--olive); padding:10px 14px; margin:14px 0; border-radius:4px; font-size:13px; }
+  .transit strong { color:var(--rust-dark); }
+  .pill { display:inline-block; background:var(--sand); color:var(--ink); font-size:12px; padding:3px 10px; border-radius:12px; margin:3px 4px 3px 0; }
+  .pill.beach { background:#cae7ec; color:#1e5860; }
+  .pill.culture { background:#e3d0e8; color:#5a3a66; }
+  .pill.food { background:#f3d8c4; color:#7b3a15; }
+  .pill.nature { background:#c7e0c4; color:#1f5226; }
+  .listing { background:#fff; border:1px solid var(--rule); border-radius:8px; padding:14px 18px; margin:10px 0; }
+  .listing.top { border-left:4px solid var(--rust); }
+  .listing h3 { margin:0 0 4px; font-size:16px; }
+  .listing .lmeta { font-size:13px; color:var(--slate); margin:2px 0 6px; }
+  .listing .lprice { font-size:18px; font-weight:700; color:var(--rust-dark); margin:6px 0; }
+  .btn { display:inline-block; background:var(--rust); color:#fff !important; text-decoration:none; padding:8px 14px; border-radius:6px; font-weight:600; font-size:13px; margin:4px 4px 4px 0; }
+  .btn.secondary { background:var(--ocean); }
+  .btn.olive { background:var(--olive); }
+  .btn:hover { opacity:0.9; }
+  ul.notes { padding-left:18px; margin:6px 0; font-size:14px; }
+  ul.notes li { margin-bottom:4px; }
+  table { width:100%; border-collapse:collapse; margin:12px 0 20px; font-size:14px; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
+  th { background:var(--sand); font-size:13px; }
+  td.right, th.right { text-align:right; }
+  .footnote { font-size:12px; color:var(--slate); margin-top:38px; padding-top:16px; border-top:1px solid var(--rule); }
+  .nav { background:var(--sand); border-radius:6px; padding:12px 14px; margin:0 0 20px; font-size:13px; position:sticky; top:8px; z-index:10; }
+  .nav a { color:var(--rust-dark); text-decoration:none; margin-right:14px; font-weight:600; }
+  .switcher { background:#fff; border:1px solid var(--rule); border-radius:6px; padding:10px 14px; margin:0 0 20px; font-size:13px; }
+  .switcher a { color:var(--rust-dark); font-weight:600; text-decoration:none; margin-right:14px; }
+  .callout { background:#fff7ec; border-left:4px solid var(--gold); padding:12px 16px; margin:14px 0; border-radius:4px; font-size:14px; }
+  .callout strong { color:var(--rust-dark); }
+  #lb { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.94); z-index:9999; align-items:center; justify-content:center; padding:24px; cursor:zoom-out; }
+  #lb.active { display:flex; }
+  #lb img { max-width:96vw; max-height:92vh; object-fit:contain; border-radius:4px; box-shadow:0 8px 32px rgba(0,0,0,0.6); }
+  #lb .close-hint { position:absolute; top:18px; right:20px; color:rgba(255,255,255,0.7); font-size:28px; font-weight:300; cursor:pointer; line-height:1; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="switcher"><strong>Compare:</strong>
+  <a href="index.html">← All options</a>
+  <span style="color:var(--ink);"><strong>You are here</strong> · Chosen Arc</span>
+</div>
+
+<header class="cover">
+  <div class="badge">Chosen Arc · Cross-border Portugal + Spain · Jul 21 → Aug 1, 2026</div>
+  <h1>Tavira → Lagos → Cádiz · 11 nights of cove + sandbar beaches</h1>
+  <p class="sub">4A + 1C · Fly into Faro / Fly out of Sevilla · Trains within each country · 1 cross-border bus transfer</p>
+</header>
+
+<nav class="nav">
+  <a href="#overview">Overview</a>
+  <a href="#tavira">Tavira (3N)</a>
+  <a href="#lagos">Lagos / Salema (4N)</a>
+  <a href="#cadiz">Cádiz / El Puerto (4N)</a>
+  <a href="#logistics">Logistics</a>
+</nav>
+
+<section id="overview">
+  <h2>The arc at a glance</h2>
+  <div class="fact-grid">
+    <div class="fact"><p class="label">Total nights</p><p class="value">11</p></div>
+    <div class="fact"><p class="label">Stops</p><p class="value">3 Airbnbs</p></div>
+    <div class="fact"><p class="label">Countries</p><p class="value">PT + ES</p></div>
+    <div class="fact"><p class="label">Beach style</p><p class="value">Sandbar + cove + dunes</p></div>
+    <div class="fact"><p class="label">Internal flights</p><p class="value">0</p></div>
+    <div class="fact"><p class="label">Estimated lodging</p><p class="value">~$5,000 CAD</p></div>
+  </div>
+  <p>Land at Faro, ease in on the sandbar beaches and Ria Formosa lagoons of the eastern Algarve, move west to the postcard cove beaches around Lagos for 4 nights, then cross the border into Spain via Sevilla bus to spend the finale on the Costa de la Luz with Cádiz as your hub. Fly home from Sevilla. Three coasts, two countries, one road back to Paris.</p>
+  <div class="callout"><strong>Why this hybrid wins:</strong> hits the postcard cove beaches you wanted (Dona Ana, Camilo, Ponta da Piedade), adds the wider sandy Atlantic of the Spanish side (Bolonia is 1h from El Puerto), avoids backtracking, and the Sevilla airport gives you direct AF flights home with no double-fly hassle.</p>
+  <p style="font-size:13px; color:var(--slate);"><em>Tap any image to expand. Tap any "View on Airbnb" button to jump to the live verified listing with your dates pre-filled.</em></p>
+</section>
+
+<!-- STOP 1: TAVIRA -->
+<section class="stop" id="tavira">
+  <h2>Stop 1 · Tavira &amp; Cabanas</h2>
+  <p class="stop-meta"><strong>Jul 21 – 24 · 3 nights</strong> · Eastern Algarve · sandbar beaches via ferry · Ria Formosa lagoon nature</p>
+
+  <img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Vista_Tavira.jpg" alt="Tavira town view">
+
+  <div>
+    <span class="pill beach">Ilha de Tavira sandbar</span>
+    <span class="pill nature">Ria Formosa Natural Park</span>
+    <span class="pill culture">Moorish hilltop castle</span>
+    <span class="pill food">Cataplana + Algarve grilled fish</span>
+  </div>
+
+  <h4>Why here</h4>
+  <p>Quiet, working Algarve town. Roman bridge, Moorish castle, whitewashed lanes. Beach access via 5-minute ferry to Ilha de Tavira — 11 km of empty soft sand. The Ria Formosa Natural Park stretches W from here with salt pans, flamingos, and seahorses. Cabanas (5 km E) is the alternate base — quieter again, dedicated ferry to its own sandbar.</p>
+
+  <div class="photo-grid">
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Ria_Formosa_9.JPG" alt="Ria Formosa lagoon">
+      <figcaption>Ria Formosa · 60 km of protected lagoons</figcaption>
+    </figure>
+  </div>
+
+  <h4>Verified Airbnbs · Jul 21–24 · 4A + 1C · 3BR+</h4>
+
+  <div class="listing top">
+    <h3><span class="pill">Top value</span>Teixeira's House · Tavira town</h3>
+    <p class="lmeta">3 BR · 4 beds · 2 baths · 4.78★ (121 reviews) · Free cancellation</p>
+    <p class="lprice">$1,022 CAD · 3 nights</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/49820078?check_in=2026-07-21&check_out=2026-07-24&adults=4&children=1">View on Airbnb</a>
+  </div>
+
+  <div class="listing">
+    <h3>Country House w/ Private Pool · 5 min from Tavira &amp; Beach</h3>
+    <p class="lmeta">3 BR · 4 beds · 1 bath · Superhost · Private pool · Free cancellation</p>
+    <p class="lprice">$1,621 CAD · 3 nights</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/859219259868521234?check_in=2026-07-21&check_out=2026-07-24&adults=4&children=1">View on Airbnb</a>
+  </div>
+
+  <div class="listing">
+    <h3>Spacious Apartment · Sea-view rooftop pool · Olhão</h3>
+    <p class="lmeta">3 BR · 4 beds · 2 baths · Top guest favorite · 20 min drive W of Tavira, walking distance to Olhão ferry to Armona / Culatra sandbars</p>
+    <p class="lprice">$1,204 CAD · 3 nights</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/1133575818193444060?check_in=2026-07-21&check_out=2026-07-24&adults=4&children=1">View on Airbnb</a>
+  </div>
+
+  <div class="listing">
+    <h3>Home by the Sea · Ocean &amp; Lagoon Views · Faro</h3>
+    <p class="lmeta">4 BR · 4 beds · 2 baths · Guest favorite · Premium pick · 35 min drive W of Tavira</p>
+    <p class="lprice">$2,070 CAD · 3 nights</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/6982295?check_in=2026-07-21&check_out=2026-07-24&adults=4&children=1">View on Airbnb</a>
+  </div>
+
+  <div class="transit"><strong>Fri Jul 24 — transit:</strong> Tavira → Lagos · 2h 30m direct on CP regional Algarve line (~€10 pp, €50 family). One train, no changes. Lunch in Lagos by 1pm.</div>
+</section>
+
+<!-- STOP 2: LAGOS -->
+<section class="stop" id="lagos">
+  <h2>Stop 2 · Lagos · Burgau · Salema</h2>
+  <p class="stop-meta"><strong>Jul 24 – 28 · 4 nights</strong> · Western Algarve · postcard cove beaches · Ponta da Piedade · Burgau/Salema fishing villages</p>
+
+  <img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/5/52/Vista_Centro_Hist%C3%B3rico_de_Lagos_%28cropped%29.jpg" alt="Lagos Old Town">
+
+  <div>
+    <span class="pill beach">Praia Dona Ana · Camilo · Pinhão</span>
+    <span class="pill beach">Praia da Luz · Burgau · Salema</span>
+    <span class="pill nature">Ponta da Piedade sea caves</span>
+    <span class="pill culture">Walled Old Town + Slave Market</span>
+  </div>
+
+  <h4>Why here</h4>
+  <p>Lagos is the cove-beach hub: Praia Dona Ana (postcard golden cove), Camilo (down 200 stairs), Pinhão (locals' quieter pick), and the cliff-walking trail along Ponta da Piedade with its sandstone arches. <strong>Burgau and Salema</strong> are smaller fishing villages 15–20 min W with their own sandy bays — quieter than Lagos town, perfect if you want a beach-village base instead of a tourist hub.</p>
+
+  <div class="photo-grid">
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Ponta_da_Piedade_aerial_view.jpg" alt="Ponta da Piedade">
+      <figcaption>Ponta da Piedade · sandstone formations</figcaption>
+    </figure>
+  </div>
+
+  <h4>Verified Airbnbs · Jul 24–28 · 4A + 1C · 3BR + pool</h4>
+
+  <div class="listing top">
+    <h3><span class="pill">Top value</span>Sea Apartment · Praia da Luz</h3>
+    <p class="lmeta">3 BR · 4 beds · 3 baths · Guest favorite · 4.94★ · Praia da Luz is the family-friendly sandy beach village 10 min W of Lagos</p>
+    <p class="lprice">$1,840 CAD · 4 nights</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/1217258619258344555?check_in=2026-07-24&check_out=2026-07-28&adults=4&children=1">View on Airbnb</a>
+  </div>
+
+  <div class="listing">
+    <h3>3-Bedroom Townhouse #100 · Quinta da Encosta Velha · Budens (near Salema)</h3>
+    <p class="lmeta">3 BR · 5 beds · 3 baths · Superhost · Resort with pool · 5 min drive to Salema beach</p>
+    <p class="lprice">$1,753 CAD · 4 nights (discounted from $2,260)</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/878130279610165176?check_in=2026-07-24&check_out=2026-07-28&adults=4&children=1">View on Airbnb</a>
+  </div>
+
+  <div class="listing">
+    <h3>Vibrant Marina Luxury Apartment · Lagos</h3>
+    <p class="lmeta">3 BR · 3 beds · 3 baths · Superhost · Walking distance to Old Town + marina · Free cancellation</p>
+    <p class="lprice">$2,464 CAD · 4 nights</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/1682620627295012497?check_in=2026-07-24&check_out=2026-07-28&adults=4&children=1">View on Airbnb</a>
+  </div>
+
+  <div class="listing">
+    <h3>Luxury 3 Bedroom Penthouse by the Marina · Lagos</h3>
+    <p class="lmeta">3 BR · 5 beds · 2 baths · Free cancellation</p>
+    <p class="lprice">$2,294 CAD · 4 nights</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/924392578269585569?check_in=2026-07-24&check_out=2026-07-28&adults=4&children=1">View on Airbnb</a>
+  </div>
+
+  <div class="listing">
+    <h3>Villa with Private Pool #143 · Quinta da Encosta · Budens (premium)</h3>
+    <p class="lmeta">3 BR · 5 beds · 3 baths · Guest favorite · Private pool · Near Salema</p>
+    <p class="lprice">$3,105 CAD · 4 nights (discounted from $4,003)</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/40194290?check_in=2026-07-24&check_out=2026-07-28&adults=4&children=1">View on Airbnb</a>
+  </div>
+
+  <div class="transit"><strong>Tue Jul 28 — cross-border transit:</strong> Lagos → Faro train 1h 45m · Faro → Sevilla direct bus 3h on ALSA (~€20 pp, €100 family) · Sevilla → El Puerto AVE 1h 45m. Total ~7h+changes — pack snacks, do it as a travel day. <em>Alternative:</em> Lagos → Sevilla via Tavira + bus (faster overall, ~5h via Eva/Comes bus crossing the Guadiana). Or fly Faro→Sevilla (1h flight, defeats train ethos).</div>
+</section>
+
+<!-- STOP 3: CÁDIZ / EL PUERTO -->
+<section class="stop" id="cadiz">
+  <h2>Stop 3 · Cádiz &amp; El Puerto de Santa María</h2>
+  <p class="stop-meta"><strong>Jul 28 – Aug 1 · 4 nights</strong> · Costa de la Luz · 3000-year-old port city + wider Atlantic sandy beaches</p>
+
+  <img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/3/35/Cadiz_aerea.jpg" alt="Cádiz aerial">
+
+  <div>
+    <span class="pill beach">La Caleta · Cádiz city beach</span>
+    <span class="pill beach">Bolonia dunes · Zahara (day trip)</span>
+    <span class="pill culture">Cádiz Old Town · Cathedral</span>
+    <span class="pill food">Sherry from Jerez · tuna ronqueo</span>
+  </div>
+
+  <h4>Why here</h4>
+  <p>Cádiz is the oldest continuously inhabited city in Western Europe — Phoenician port still humming. La Caleta is the in-city beach (the Halle Berry James Bond beach). El Puerto de Santa María (across the bay, 30 min ferry or 15-min AVE train) is the sherry-bodega town and a quieter base. Day trips: <strong>Bolonia</strong> (1h drive, wide sandy beach with the giant dune you climb), <strong>Jerez</strong> (bodega tours), <strong>Sanlúcar de Barrameda</strong> (manzanilla sherry + horse races on the beach).</p>
+
+  <div class="photo-grid">
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/8/80/Cadiz_playa_caleta.jpg" alt="Playa de La Caleta">
+      <figcaption>La Caleta · city beach in Cádiz Old Town</figcaption>
+    </figure>
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/5/57/Beach_of_Bolonia_-_014_-_view.jpg" alt="Bolonia Beach">
+      <figcaption>Playa de Bolonia · 1h drive, wide Atlantic dunes</figcaption>
+    </figure>
+  </div>
+
+  <h4>Verified Airbnbs · Jul 28–Aug 1 · 4A + 1C · 3BR+</h4>
+
+  <div class="listing top">
+    <h3><span class="pill">Top value</span>Penthouse Terraces + Parking · Chiclana de la Frontera</h3>
+    <p class="lmeta">3 BR · 4 beds · 2 baths · Top guest favorite · 20 min S of Cádiz, walking distance to Playa de la Barrosa (long sandy)</p>
+    <p class="lprice">$1,064 CAD · 4 nights</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/679573630328413236?check_in=2026-07-28&check_out=2026-08-01&adults=4&children=1">View on Airbnb</a>
+  </div>
+
+  <div class="listing">
+    <h3>Fantastic Apartment in Cádiz · Next to the beach</h3>
+    <p class="lmeta">3 BR · 4 beds · 2 baths · Guest favorite</p>
+    <p class="lprice">$1,258 CAD · 4 nights</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/623085251758723773?check_in=2026-07-28&check_out=2026-08-01&adults=4&children=1">View on Airbnb</a>
+  </div>
+
+  <div class="listing">
+    <h3>Ocean View Apartment · 1st row beach · Cádiz</h3>
+    <p class="lmeta">3 BR · 5 beds · 2 baths · Superhost</p>
+    <p class="lprice">$1,407 CAD · 4 nights</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/707143456415754242?check_in=2026-07-28&check_out=2026-08-01&adults=4&children=1">View on Airbnb</a>
+  </div>
+
+  <div class="listing">
+    <h3>Elegant Apartment · Plaza de España · Cádiz</h3>
+    <p class="lmeta">3 BR · 3 beds · 2 baths · Superhost · Old Town location</p>
+    <p class="lprice">$1,613 CAD · 4 nights</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/1478554594456534740?check_in=2026-07-28&check_out=2026-08-01&adults=4&children=1">View on Airbnb</a>
+  </div>
+
+  <div class="listing">
+    <h3>Dehesa de las Yeguas · House with pool · 15 min beach · Cádiz outskirts</h3>
+    <p class="lmeta">3 BR · 6 beds · 2 baths · Guest favorite · Private pool</p>
+    <p class="lprice">$1,866 CAD · 4 nights</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/19356191?check_in=2026-07-28&check_out=2026-08-01&adults=4&children=1">View on Airbnb</a>
+  </div>
+
+  <div class="listing">
+    <h3>Luxury 3BR near La Caleta Beach · Cádiz (premium)</h3>
+    <p class="lmeta">3 BR · 4 beds · 2 baths · 4.74★ · Free cancellation · In the heart of Old Cádiz</p>
+    <p class="lprice">$2,291 CAD · 4 nights (discounted from $2,907)</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/1268094542158268309?check_in=2026-07-28&check_out=2026-08-01&adults=4&children=1">View on Airbnb</a>
+  </div>
+
+  <div class="transit"><strong>Sat Aug 1 — exit:</strong> El Puerto/Cádiz → Sevilla AVE 1h 45m · taxi 20 min Sevilla Santa Justa → SVQ airport · fly SVQ → CDG 2h 45m direct AF. Total ~5–6h. Aug 1–2 at sister's in Paris, Aug 3 CDG → KRK as planned.</div>
+</section>
+
+<!-- LOGISTICS -->
+<section id="logistics">
+  <h2>Logistics &amp; bookings</h2>
+
+  <h3>Flights · open-jaw</h3>
+  <ul class="notes">
+    <li>CDG → FAO Faro (Jul 21) · Air France/Vueling/TAP direct · ~$160 pp · ~$800 family · 2h 45m</li>
+    <li>SVQ Sevilla → CDG (Aug 1) · Air France direct · ~$180 pp · ~$900 family · 2h 45m</li>
+    <li><strong>Total flights:</strong> ~$1,700 CAD round trip — vs $2,406 for the original CDG↔HER booking</li>
+  </ul>
+
+  <h3>Ground transport</h3>
+  <table>
+    <thead><tr><th>Leg</th><th>Mode</th><th>Time</th><th class="right">Family of 5</th></tr></thead>
+    <tbody>
+      <tr><td>FAO airport → Tavira</td><td>Airport bus + CP train</td><td>45 min</td><td class="right">~€40</td></tr>
+      <tr><td>Tavira → Lagos</td><td>CP regional (direct)</td><td>2h 30m</td><td class="right">~€50</td></tr>
+      <tr><td>Lagos → Sevilla (cross-border)</td><td>CP to Faro + ALSA bus to Sevilla</td><td>~5–6h</td><td class="right">~€120</td></tr>
+      <tr><td>Sevilla → El Puerto / Cádiz</td><td>Renfe AVE direct</td><td>1h 45m</td><td class="right">~€100</td></tr>
+      <tr><td>Cádiz/El Puerto → Sevilla SVQ airport</td><td>AVE + airport taxi</td><td>2h</td><td class="right">~€120</td></tr>
+      <tr><th>Total ground</th><th></th><th></th><th class="right">~€430 / ~$640 CAD</th></tr>
+    </tbody>
+  </table>
+
+  <h3>Rental car (optional, recommended for Stop 3)</h3>
+  <p>Day trips to Bolonia, Zahara, Sanlúcar, Jerez bodegas all reachable by bus/train but a car gives flexibility. Pick up at Sevilla station, drop at SVQ airport. ~€200–300 for 4 days.</p>
+
+  <h3>Must-book-ahead</h3>
+  <ul class="notes">
+    <li>Ferry to Ilha de Tavira — buy at dock, every 30 min summer</li>
+    <li>Ponta da Piedade kayak — book at Lagos marina day-of</li>
+    <li>Lagos→Sevilla ALSA bus — book on ALSA website 1–2 weeks ahead in August</li>
+    <li>Jerez sherry bodega tour (Tio Pepe / Lustau) — book online a few days ahead</li>
+    <li>Cádiz Cathedral + Tavira Wine Bar Hostal — both worth a quick online check</li>
+  </ul>
+
+  <h3>Quick-booking links</h3>
+  <a class="btn" href="https://www.cp.pt/passageiros/en">CP Trains Portugal</a>
+  <a class="btn" href="https://www.alsa.com/en/">ALSA Bus (cross-border)</a>
+  <a class="btn" href="https://www.renfe.com/es/en">Renfe Trains Spain</a>
+  <a class="btn olive" href="https://www.airfrance.us/">Air France · book flights</a>
+</section>
+
+<div class="footnote">
+Generated 2026-05-13 by Morgan · Chosen Arc v1 · all Airbnb listings verified live in Chrome with check_in/check_out/guest params · prices reflect Airbnb's display at time of verification and may shift before booking · all images sourced from Wikipedia REST API
+</div>
+
+</div>
+
+<div id="lb"><span class="close-hint">×</span><img src="" alt=""></div>
+<script>
+(function(){var lb=document.getElementById('lb'),lbImg=lb.querySelector('img');document.querySelectorAll('img[data-lightbox]').forEach(function(img){img.addEventListener('click',function(){lbImg.src=img.src;lbImg.alt=img.alt||'';lb.classList.add('active');document.body.style.overflow='hidden';});});lb.addEventListener('click',function(){lb.classList.remove('active');lbImg.src='';document.body.style.overflow='';});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('active')){lb.classList.remove('active');lbImg.src='';document.body.style.overflow='';}});})();
+</script>
+</body>
+</html>
