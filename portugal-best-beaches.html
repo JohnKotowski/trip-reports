@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Beaches of Portugal · Option E</title>
+<style>
+  :root { --cream:#faf6ef; --ink:#1f1a13; --rust:#b85428; --rust-dark:#8c3d1d; --olive:#6e7c4a; --sand:#ede4d2; --slate:#4a4239; --rule:#d9cfb9; --ocean:#2a6f7a; --gold:#c89030; }
+  * { box-sizing: border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; background:var(--cream); color:var(--ink); margin:0; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  .container { max-width:960px; margin:0 auto; padding:28px 22px 80px; }
+  header.cover { background:linear-gradient(135deg,#2a6f7a 0%,#c89030 50%,#c75a30 100%); color:#fff; padding:64px 36px; border-radius:12px; margin-bottom:28px; }
+  header.cover h1 { font-size:36px; margin:0 0 8px; letter-spacing:-0.02em; line-height:1.12; }
+  header.cover .sub { font-size:15px; opacity:0.94; margin:0; }
+  header.cover .badge { display:inline-block; background:rgba(255,255,255,0.2); padding:4px 10px; border-radius:12px; font-size:12px; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:14px; }
+  h2 { font-size:24px; color:var(--rust-dark); margin:44px 0 12px; padding-bottom:6px; border-bottom:2px solid var(--rust); }
+  h3 { font-size:18px; margin:22px 0 6px; color:var(--ink); }
+  h4 { font-size:14px; margin:14px 0 4px; color:var(--slate); text-transform:uppercase; letter-spacing:0.05em; }
+  p { margin:6px 0 12px; }
+  .fact-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:10px; margin:14px 0 20px; }
+  .fact { background:var(--sand); padding:10px 12px; border-radius:6px; border-left:3px solid var(--olive); }
+  .fact .label { font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--slate); margin:0 0 2px; }
+  .fact .value { font-size:14px; font-weight:600; margin:0; }
+  .stop { background:#fff; border:1px solid var(--rule); border-radius:10px; padding:22px; margin:24px 0; box-shadow:0 2px 6px rgba(0,0,0,0.04); }
+  .stop h2 { margin-top:0; }
+  .stop-meta { font-size:13px; color:var(--slate); margin:-8px 0 16px; }
+  .stop-meta strong { color:var(--ink); }
+  .hero-img { width:100%; height:360px; object-fit:cover; border-radius:8px; display:block; margin-bottom:14px; background:var(--sand); cursor:zoom-in; transition:opacity 0.2s; }
+  .hero-img:hover { opacity:0.92; }
+  .photo-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:10px; margin:12px 0 18px; }
+  .photo-grid img { width:100%; height:180px; object-fit:cover; border-radius:6px; display:block; background:var(--sand); cursor:zoom-in; transition:opacity 0.2s; }
+  .photo-grid img:hover { opacity:0.92; }
+  .photo-grid figure { margin:0; }
+  .photo-grid figcaption { font-size:12px; color:var(--slate); padding:4px 2px; }
+  .photo-grid.four { grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); }
+  .photo-grid.four img { height:150px; }
+  .day { border-left:3px solid var(--ocean); padding:12px 0 12px 16px; margin:12px 0; }
+  .day .head { font-weight:700; color:var(--rust-dark); font-size:15px; margin-bottom:4px; }
+  .day .activities { margin:6px 0; padding-left:16px; }
+  .day .activities li { margin-bottom:4px; font-size:14px; }
+  .transit { background:var(--sand); border-left:3px solid var(--olive); padding:10px 14px; margin:14px 0; border-radius:4px; font-size:13px; }
+  .transit strong { color:var(--rust-dark); }
+  .pillrow { margin:8px 0; }
+  .pill { display:inline-block; background:var(--sand); color:var(--ink); font-size:12px; padding:3px 10px; border-radius:12px; margin:3px 4px 3px 0; }
+  .pill.beach { background:#cae7ec; color:#1e5860; }
+  .pill.hike { background:#d9e3c2; color:#404d20; }
+  .pill.nature { background:#c7e0c4; color:#1f5226; }
+  .pill.food { background:#f3d8c4; color:#7b3a15; }
+  .pill.culture { background:#e3d0e8; color:#5a3a66; }
+  .btn { display:inline-block; background:var(--rust); color:#fff !important; text-decoration:none; padding:8px 14px; border-radius:6px; font-weight:600; font-size:13px; margin:4px 4px 4px 0; }
+  .btn.secondary { background:var(--ocean); }
+  .btn.olive { background:var(--olive); }
+  ul.notes { padding-left:18px; margin:6px 0; font-size:14px; }
+  ul.notes li { margin-bottom:4px; }
+  .footnote { font-size:12px; color:var(--slate); margin-top:38px; padding-top:16px; border-top:1px solid var(--rule); }
+  .nav { background:var(--sand); border-radius:6px; padding:12px 14px; margin:0 0 20px; font-size:13px; position:sticky; top:8px; z-index:10; }
+  .nav a { color:var(--rust-dark); text-decoration:none; margin-right:14px; font-weight:600; }
+  .switcher { background:#fff; border:1px solid var(--rule); border-radius:6px; padding:10px 14px; margin:0 0 20px; font-size:13px; }
+  .switcher a { color:var(--rust-dark); font-weight:600; text-decoration:none; margin-right:14px; }
+  .callout { background:#fff7ec; border-left:4px solid var(--gold); padding:12px 16px; margin:14px 0; border-radius:4px; font-size:14px; }
+  .callout strong { color:var(--rust-dark); }
+  #lb { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.94); z-index:9999; align-items:center; justify-content:center; padding:24px; cursor:zoom-out; }
+  #lb.active { display:flex; }
+  #lb img { max-width:96vw; max-height:92vh; object-fit:contain; border-radius:4px; box-shadow:0 8px 32px rgba(0,0,0,0.6); }
+  #lb .close-hint { position:absolute; top:18px; right:20px; color:rgba(255,255,255,0.7); font-size:28px; font-weight:300; cursor:pointer; line-height:1; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="switcher"><strong>Compare:</strong>
+  <a href="index.html">← All options</a>
+  <a href="andalucia.html">Andalucía (B)</a>
+  <a href="portugal.html">Portugal nature (C)</a>
+  <a href="portugal-coves.html">Cove coast (D)</a>
+  <span style="color:var(--ink);"><strong>You are here</strong> · Top beaches tour (E)</span>
+</div>
+
+<header class="cover">
+  <div class="badge">Itinerary v1 · Top Beaches of Portugal · Option E</div>
+  <h1>Top Beaches of Portugal · Lisbon to Algarve by Train</h1>
+  <p class="sub">July 21 → August 1, 2026 · 4A + 1C · 11 nights · Fly CDG↔LIS in / FAO out · All train</p>
+</header>
+
+<nav class="nav">
+  <a href="#overview">Overview</a>
+  <a href="#cascais">Cascais &amp; Sintra</a>
+  <a href="#arrabida">Setúbal &amp; Arrábida</a>
+  <a href="#algarve">Algarve cove zone</a>
+  <a href="#logistics">Logistics</a>
+</nav>
+
+<section id="overview">
+  <h2>The arc at a glance</h2>
+  <div class="fact-grid">
+    <div class="fact"><p class="label">Total nights</p><p class="value">11</p></div>
+    <div class="fact"><p class="label">Stops</p><p class="value">3 Airbnbs</p></div>
+    <div class="fact"><p class="label">Famous beaches hit</p><p class="value">5</p></div>
+    <div class="fact"><p class="label">UNESCO sites</p><p class="value">Sintra · Lisbon</p></div>
+    <div class="fact"><p class="label">Internal flights</p><p class="value">0</p></div>
+    <div class="fact"><p class="label">Train transit total</p><p class="value">~7h split</p></div>
+  </div>
+  <p>This arc hits 5 of the 6 famous Portugal mainland beaches you listed: <strong>Ursa</strong> (Sintra), <strong>Galapinhos</strong> (Arrábida), <strong>Marinha</strong> + <strong>Carvalho</strong> + <strong>Falésia</strong> (Algarve). We fly into Lisbon, base near Cascais for the Sintra cluster, train down to Setúbal for the Arrábida Natural Park, then carry on to the Algarve cove zone for the finale. Open-jaw: out via Faro airport so no doubling back.</p>
+  <div class="callout"><strong>Why this works:</strong> All-train, no internal flights, every leg under 4h. Iconic Sintra palaces in the same stop as wild cliff beaches. Arrábida is the locals' summer secret — Galapinhos is consistently the highest-rated mainland Portugal beach for water clarity. Then the postcard Algarve finale.</p>
+  <p style="font-size:13px; color:var(--slate);"><em>Tap any image to expand.</em></p>
+</section>
+
+<!-- STOP 1: CASCAIS / SINTRA -->
+<section class="stop" id="cascais">
+  <h2>Stop 1 · Cascais &amp; Sintra</h2>
+  <p class="stop-meta"><strong>Jul 21 – 24 · 3 nights</strong> · Coastal Cascais base · Sintra hilltop palaces · Ursa Beach + Praia da Adraga + Cabo da Roca</p>
+
+  <img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Guia%2C_Cascais._Panorama_outubro_2017.jpg/2400px-Guia%2C_Cascais._Panorama_outubro_2017.jpg" alt="Cascais coastal panorama">
+
+  <div class="pillrow">
+    <span class="pill beach">Ursa · wild cliff beach</span>
+    <span class="pill beach">Praia da Adraga</span>
+    <span class="pill culture">Sintra UNESCO palaces</span>
+    <span class="pill nature">Cabo da Roca · westernmost point</span>
+  </div>
+
+  <h4>Why here</h4>
+  <p>Cascais is a sun-bleached coastal town 40 min by train W of Lisbon — sandy in-town beaches, marina, real working old quarter. It's the perfect base for the <strong>Sintra UNESCO area</strong>: fairytale palaces (Pena, Quinta da Regaleira), the dramatic <strong>Cabo da Roca</strong> cliffs (Europe's westernmost point), and the wild Atlantic beaches that nobody quite manages to crowd — <strong>Ursa Beach</strong> (you hike down a cliff path to reach it) and <strong>Praia da Adraga</strong> (similar but easier access).</p>
+
+  <div class="photo-grid four">
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Sintra_-_Palacio_da_Pena_%2820332995770%29_%28cropped2%29.jpg/2400px-Sintra_-_Palacio_da_Pena_%2820332995770%29_%28cropped2%29.jpg" alt="Pena Palace Sintra">
+      <figcaption>Pena Palace · Sintra UNESCO</figcaption>
+    </figure>
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cabo_da_Roca_on_sunset.jpg/2400px-Cabo_da_Roca_on_sunset.jpg" alt="Cabo da Roca cliffs at sunset">
+      <figcaption>Cabo da Roca · Europe's westernmost point</figcaption>
+    </figure>
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/3/38/Praia_da_adraga_1.jpg" alt="Praia da Adraga wild beach">
+      <figcaption>Praia da Adraga · wild Sintra coast (sister to Ursa)</figcaption>
+    </figure>
+  </div>
+
+  <h4>Day by day</h4>
+
+  <div class="day"><div class="head">Tue Jul 21 · Arrival + Cascais beach evening</div>
+    <ul class="activities">
+      <li>Morning flight CDG → Lisbon · 2h45 direct on AF/TAP</li>
+      <li>Train Lisbon airport → Cais do Sodré → Cascais line: 40 min (~€5 pp)</li>
+      <li>Check in, walk the seafront promenade to Praia da Rainha or Praia da Conceição for first swim</li>
+      <li>Dinner at <em>Mar do Inferno</em> overlooking the Boca do Inferno cliff blowhole</li>
+    </ul>
+  </div>
+
+  <div class="day"><div class="head">Wed Jul 22 · Sintra palace day</div>
+    <ul class="activities">
+      <li>30-min train Cascais → Sintra (transfer in Lisbon, or take the direct bus 403)</li>
+      <li>Morning at <strong>Pena Palace</strong> — early entry to beat heat (book online ahead)</li>
+      <li>Lunch in Sintra Old Town at <em>Tascantiga</em></li>
+      <li>Afternoon at <strong>Quinta da Regaleira</strong> — gardens, esoteric symbolism, the spiral initiation well</li>
+      <li>Sunset at <strong>Cabo da Roca</strong> — Europe's westernmost cliffs, 140m above the Atlantic</li>
+    </ul>
+  </div>
+
+  <div class="day"><div class="head">Thu Jul 23 · Ursa Beach hike</div>
+    <ul class="activities">
+      <li>20-min drive (or bus + walk) N from Cascais to the trailhead above <strong>Praia da Ursa</strong></li>
+      <li><strong>The hike down</strong>: 30-min steep cliff trail to the beach — not for tiny kids, but doable from age 8+ with care. The reward: a wild crescent of sand cradled by a giant rock arch and stacks, often nearly empty</li>
+      <li>Pack water, snacks, swim gear — no facilities at the beach</li>
+      <li>Hike back up (45 min), drive 10 min to <strong>Praia da Adraga</strong> for easier-access wild beach + lunch at the cliff-top café <em>Restaurante Mar Adraga</em></li>
+      <li>Evening back in Cascais for cocktails at <em>Comoba</em></li>
+    </ul>
+  </div>
+
+  <div class="transit"><strong>Fri Jul 24 — transit day:</strong> Cascais → Lisbon Cais do Sodré (40 min) → Lisbon Sete Rios → Setúbal (45 min). Total ~2h door-to-door. Or 30-min direct Fertagus train via 25 de Abril bridge from Lisbon's Roma-Areeiro station.</div>
+</section>
+
+<!-- STOP 2: ARRÁBIDA -->
+<section class="stop" id="arrabida">
+  <h2>Stop 2 · Setúbal &amp; Arrábida Natural Park</h2>
+  <p class="stop-meta"><strong>Jul 24 – 27 · 3 nights</strong> · Locals' secret · Galapinhos Beach · Mediterranean-clear water in a protected park</p>
+
+  <img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Parque_Natural_da_Arr%C3%A1bia.jpg/2400px-Parque_Natural_da_Arr%C3%A1bia.jpg" alt="Arrábida Natural Park">
+
+  <div class="pillrow">
+    <span class="pill beach">Galapinhos · #1 mainland water clarity</span>
+    <span class="pill beach">Portinho da Arrábida</span>
+    <span class="pill nature">Arrábida Natural Park</span>
+    <span class="pill food">Setúbal fried-cuttlefish</span>
+  </div>
+
+  <h4>Why here</h4>
+  <p>This stop is the antidote to mass tourism. The <strong>Arrábida Natural Park</strong> south of Lisbon is a steep cliff range that drops into a sheltered bay with Mediterranean-clear water — totally unlike anywhere else in Portugal. <strong>Galapinhos</strong> is consistently the highest-rated mainland beach for water quality (3 m visibility), nestled in a pine-and-cliff bay you have to walk 15 min to reach. <strong>Portinho da Arrábida</strong> is the postcard fishing-village beach next to it. Setúbal is a working port town with the best <em>choco frito</em> (fried cuttlefish) in Portugal.</p>
+
+  <div class="photo-grid">
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Setubal_III_%28cropped%29.jpg" alt="Setúbal town">
+      <figcaption>Setúbal · port town and Arrábida base</figcaption>
+    </figure>
+  </div>
+
+  <h4>Day by day</h4>
+
+  <div class="day"><div class="head">Fri Jul 24 · Arrival + Galapinhos sunset</div>
+    <ul class="activities">
+      <li>Settle in Setúbal, lunch <em>Casa do Choco</em> for the fried cuttlefish</li>
+      <li>20-min drive (or bus 39) to the Arrábida park entrance, then 15-min walk down to <strong>Praia de Galapinhos</strong></li>
+      <li>Late-afternoon swim in clear blue water with the white cliffs as backdrop</li>
+      <li>Drive back, dinner at <em>O Beco</em> in Setúbal Old Town</li>
+    </ul>
+  </div>
+
+  <div class="day"><div class="head">Sat Jul 25 · Portinho + Arrábida hike</div>
+    <ul class="activities">
+      <li>Morning at <strong>Portinho da Arrábida</strong> — picture-perfect cove beach with a small fortress on the rocks</li>
+      <li>Lunch at <em>Beira-Mar</em> for fresh grilled fish on the beach</li>
+      <li>Afternoon: Arrábida Natural Park drive — the cliff-top road has lookouts every km. Short hikes from each pull-off</li>
+      <li>Evening jazz at <em>Café 5 Estrelas</em> in Setúbal if the calendar lines up</li>
+    </ul>
+  </div>
+
+  <div class="day"><div class="head">Sun Jul 26 · Comporta day trip (or 2nd Galapinhos)</div>
+    <ul class="activities">
+      <li>10-min car ferry across the Sado estuary to <strong>Tróia peninsula</strong>, drive S to <strong>Comporta</strong> — long flat sandy beach, rice fields behind, the hippest seaside village in Portugal (still feels low-key compared to Cascais)</li>
+      <li>Lunch at <em>Sal</em> — toes-in-sand, grilled fish, local Comporta white wine</li>
+      <li>Beach afternoon, ferry back to Setúbal</li>
+      <li>Final dinner at <em>Restaurante Xtoria</em></li>
+    </ul>
+  </div>
+
+  <div class="transit"><strong>Mon Jul 27 — transit day:</strong> Setúbal → Lisbon Sete Rios → Lagos · 4h total on Alfa Pendular + Algarve regional. Pack snacks. Or stay in Lisbon for one night between if you want a city break.</div>
+</section>
+
+<!-- STOP 3: ALGARVE -->
+<section class="stop" id="algarve">
+  <h2>Stop 3 · Algarve cove finale · Lagos + Carvoeiro region</h2>
+  <p class="stop-meta"><strong>Jul 27 – Aug 1 · 5 nights</strong> · Lagos base · Praia da Marinha, Carvalho, Dona Ana, Camilo, Falésia day trip</p>
+
+  <img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Praia_da_Marinha_%282012-09-27%29%2C_by_Klugschnacker_in_Wikipedia_%2886%29.JPG" alt="Praia da Marinha">
+
+  <div class="pillrow">
+    <span class="pill beach">Marinha · #1 in Europe</span>
+    <span class="pill beach">Dona Ana · Camilo · Carvalho</span>
+    <span class="pill beach">Falésia · 6km of red cliffs</span>
+    <span class="pill nature">Benagil sea cave</span>
+  </div>
+
+  <h4>Why here</h4>
+  <p>The Algarve cove zone is the postcard finale: golden-sand pocket beaches at the base of sandstone cliffs, the famous Benagil sea cave (kayak inside under the natural dome of light), and the 6 km red-cliff sweep of <strong>Praia da Falésia</strong>. We base in Lagos for the western coves and drive 25 min E for the eastern cluster around Carvoeiro.</p>
+
+  <div class="photo-grid four">
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/5/52/Vista_Centro_Hist%C3%B3rico_de_Lagos_%28cropped%29.jpg" alt="Lagos Old Town">
+      <figcaption>Lagos · base for western coves</figcaption>
+    </figure>
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Ponta_da_Piedade_aerial_view.jpg" alt="Ponta da Piedade">
+      <figcaption>Ponta da Piedade · sandstone caves</figcaption>
+    </figure>
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/4/40/Carvoeiro_20050729.jpg" alt="Carvoeiro fishing village">
+      <figcaption>Carvoeiro · eastern cove cluster</figcaption>
+    </figure>
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/7/72/Falesia_Beach_seen_from_sea.JPG" alt="Praia da Falésia">
+      <figcaption>Praia da Falésia · red cliffs</figcaption>
+    </figure>
+  </div>
+
+  <h4>Day by day</h4>
+
+  <div class="day"><div class="head">Mon Jul 27 · Arrival + Dona Ana</div>
+    <ul class="activities">
+      <li>Train Lisbon → Lagos (4h direct Alfa Pendular)</li>
+      <li>Check in, lunch in Lagos Old Town at <em>A Forja</em></li>
+      <li>Walk to <strong>Praia Dona Ana</strong> for first cove sunset</li>
+    </ul>
+  </div>
+
+  <div class="day"><div class="head">Tue Jul 28 · Western cove cluster</div>
+    <ul class="activities">
+      <li>Cliff path day: Dona Ana → Camilo → Pinhão</li>
+      <li>Kayak/SUP tour through Ponta da Piedade sea caves (~€25 pp)</li>
+      <li>Long late-afternoon beach at Porto de Mos</li>
+    </ul>
+  </div>
+
+  <div class="day"><div class="head">Wed Jul 29 · Praia da Marinha</div>
+    <ul class="activities">
+      <li>30-min drive E to <strong>Praia da Marinha</strong> — voted #1 beach in Europe (Michelin)</li>
+      <li>Walk the cliff-top Sete Vales Suspensos trail to neighboring secret coves</li>
+      <li>Lunch at the cliff-top café above Marinha</li>
+      <li>Afternoon at <strong>Praia do Carvalho</strong> — secret cove accessed by a tunnel through the cliff</li>
+    </ul>
+  </div>
+
+  <div class="day"><div class="head">Thu Jul 30 · Benagil + Algar Seco</div>
+    <ul class="activities">
+      <li>Drive to Benagil for the famous <strong>sea cave kayak tour</strong> — the cathedral-domed cave with sand inside</li>
+      <li>Walk the <strong>Algar Seco</strong> boardwalk (1 km) through eroded sandstone formations</li>
+      <li>Casual Carvoeiro lunch at <em>Bon Bon</em> (Michelin) or beachfront <em>O Lampião</em></li>
+    </ul>
+  </div>
+
+  <div class="day"><div class="head">Fri Jul 31 · Falésia red cliffs</div>
+    <ul class="activities">
+      <li>45-min drive E to <strong>Praia da Falésia</strong> — 6 km uninterrupted sand backed by red-striped cliffs</li>
+      <li>Walk the whole stretch, swim, lunch at a cliff-top restaurant in Olhos d'Água</li>
+      <li>Final beach back in Lagos at sunset, farewell dinner at <em>Casinha do Petisco</em></li>
+    </ul>
+  </div>
+
+  <div class="transit"><strong>Sat Aug 1 — exit:</strong> Lagos → Faro train 1h45 + airport bus 15 min · fly FAO → CDG 2h45 direct. Aug 1–2 at sister's in Paris, Aug 3 CDG → KRK as planned.</div>
+</section>
+
+<section id="logistics">
+  <h2>Logistics &amp; bookings</h2>
+  <h3>Flights</h3>
+  <ul class="notes">
+    <li>CDG → LIS (Jul 21): ~$170 pp · $850 family · 2h45 direct AF/TAP</li>
+    <li>FAO → CDG (Aug 1): ~$160 pp · $800 family · 2h45 direct AF</li>
+    <li><strong>Total open-jaw flights:</strong> ~$1,650 CAD for 5</li>
+  </ul>
+
+  <h3>Trains</h3>
+  <p>Book on <a href="https://www.cp.pt/passageiros/en" class="btn secondary">CP Comboios</a>. Open bookings ~2 months ahead.</p>
+  <ul class="notes">
+    <li>Lisbon airport → Cascais (commuter): ~€5 pp · €25 family · 40 min</li>
+    <li>Cascais → Sintra: direct bus 403 ~€5 pp · 30 min · or train via Lisbon</li>
+    <li>Cascais → Setúbal: ~€10 pp · €50 family · 1h45 with one change</li>
+    <li>Setúbal → Lagos (Alfa Pendular + Algarve regional): ~€30 pp · €150 family · 4h</li>
+    <li>Lagos → Faro: ~€10 pp · €50 family · 1h45</li>
+    <li><strong>Total train spend:</strong> ~€325 / ~$485 CAD</li>
+  </ul>
+
+  <h3>Rental car (strongly recommended for the Algarve stop)</h3>
+  <p>Pick up in Lagos on Jul 27, drop at Faro airport Aug 1. ~€200–350 for 5 days. Needed to reach Marinha, Benagil, Falésia.</p>
+
+  <h3>Must-book-ahead</h3>
+  <ul class="notes">
+    <li>Pena Palace timed entry — book 1–2 weeks ahead in summer</li>
+    <li>Quinta da Regaleira — book ahead, sells out</li>
+    <li>Benagil sea cave kayak — day-of at the beach</li>
+    <li>Bon Bon Carvoeiro (Michelin) — 2 weeks ahead</li>
+  </ul>
+
+  <h3>Airbnbs — browse live</h3>
+  <a class="btn" href="https://www.airbnb.com/s/Cascais--Portugal/homes?check_in=2026-07-21&check_out=2026-07-24&adults=4&children=1&min_bedrooms=3">Browse Cascais 3BR</a>
+  <a class="btn" href="https://www.airbnb.com/s/Set%C3%BAbal--Portugal/homes?check_in=2026-07-24&check_out=2026-07-27&adults=4&children=1&min_bedrooms=3">Browse Setúbal 3BR</a>
+  <a class="btn" href="https://www.airbnb.com/s/Lagos--Portugal/homes?check_in=2026-07-27&check_out=2026-08-01&adults=4&children=1&min_bedrooms=3">Browse Lagos 3BR</a>
+</section>
+
+<div class="footnote">Generated 2026-05-13 by Morgan · Option E · Top beaches of mainland Portugal tour</div>
+
+</div>
+
+<div id="lb"><span class="close-hint">×</span><img src="" alt=""></div>
+<script>
+(function(){var lb=document.getElementById('lb'),lbImg=lb.querySelector('img');document.querySelectorAll('img[data-lightbox]').forEach(function(img){img.addEventListener('click',function(){lbImg.src=img.src;lbImg.alt=img.alt||'';lb.classList.add('active');document.body.style.overflow='hidden';});});lb.addEventListener('click',function(){lb.classList.remove('active');lbImg.src='';document.body.style.overflow='';});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('active')){lb.classList.remove('active');lbImg.src='';document.body.style.overflow='';}});})();
+</script>
+</body>
+</html>

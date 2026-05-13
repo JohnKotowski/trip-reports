@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portugal Cove-Coast + Monchique · Option D</title>
+<style>
+  :root { --cream:#faf6ef; --ink:#1f1a13; --rust:#b85428; --rust-dark:#8c3d1d; --olive:#6e7c4a; --sand:#ede4d2; --slate:#4a4239; --rule:#d9cfb9; --ocean:#2a6f7a; --gold:#c89030; }
+  * { box-sizing: border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; background:var(--cream); color:var(--ink); margin:0; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  .container { max-width:960px; margin:0 auto; padding:28px 22px 80px; }
+  header.cover { background:linear-gradient(135deg,#d99450 0%,#c75a30 50%,#6e7c4a 100%); color:#fff; padding:64px 36px; border-radius:12px; margin-bottom:28px; }
+  header.cover h1 { font-size:36px; margin:0 0 8px; letter-spacing:-0.02em; line-height:1.12; }
+  header.cover .sub { font-size:15px; opacity:0.94; margin:0; }
+  header.cover .badge { display:inline-block; background:rgba(255,255,255,0.2); padding:4px 10px; border-radius:12px; font-size:12px; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:14px; }
+  h2 { font-size:24px; color:var(--rust-dark); margin:44px 0 12px; padding-bottom:6px; border-bottom:2px solid var(--rust); }
+  h3 { font-size:18px; margin:22px 0 6px; color:var(--ink); }
+  h4 { font-size:14px; margin:14px 0 4px; color:var(--slate); text-transform:uppercase; letter-spacing:0.05em; }
+  p { margin:6px 0 12px; }
+  .fact-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:10px; margin:14px 0 20px; }
+  .fact { background:var(--sand); padding:10px 12px; border-radius:6px; border-left:3px solid var(--olive); }
+  .fact .label { font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--slate); margin:0 0 2px; }
+  .fact .value { font-size:14px; font-weight:600; margin:0; }
+  .stop { background:#fff; border:1px solid var(--rule); border-radius:10px; padding:22px; margin:24px 0; box-shadow:0 2px 6px rgba(0,0,0,0.04); }
+  .stop h2 { margin-top:0; }
+  .stop-meta { font-size:13px; color:var(--slate); margin:-8px 0 16px; }
+  .stop-meta strong { color:var(--ink); }
+  .hero-img { width:100%; height:360px; object-fit:cover; border-radius:8px; display:block; margin-bottom:14px; background:var(--sand); cursor:zoom-in; transition:opacity 0.2s; }
+  .hero-img:hover { opacity:0.92; }
+  .photo-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:10px; margin:12px 0 18px; }
+  .photo-grid img { width:100%; height:180px; object-fit:cover; border-radius:6px; display:block; background:var(--sand); cursor:zoom-in; transition:opacity 0.2s; }
+  .photo-grid img:hover { opacity:0.92; }
+  .photo-grid figure { margin:0; }
+  .photo-grid figcaption { font-size:12px; color:var(--slate); padding:4px 2px; }
+  .day { border-left:3px solid var(--ocean); padding:12px 0 12px 16px; margin:12px 0; }
+  .day .head { font-weight:700; color:var(--rust-dark); font-size:15px; margin-bottom:4px; }
+  .day .activities { margin:6px 0; padding-left:16px; }
+  .day .activities li { margin-bottom:4px; font-size:14px; }
+  .transit { background:var(--sand); border-left:3px solid var(--olive); padding:10px 14px; margin:14px 0; border-radius:4px; font-size:13px; }
+  .transit strong { color:var(--rust-dark); }
+  .pillrow { margin:8px 0; }
+  .pill { display:inline-block; background:var(--sand); color:var(--ink); font-size:12px; padding:3px 10px; border-radius:12px; margin:3px 4px 3px 0; }
+  .pill.beach { background:#cae7ec; color:#1e5860; }
+  .pill.hike { background:#d9e3c2; color:#404d20; }
+  .pill.nature { background:#c7e0c4; color:#1f5226; }
+  .pill.food { background:#f3d8c4; color:#7b3a15; }
+  .pill.culture { background:#e3d0e8; color:#5a3a66; }
+  .btn { display:inline-block; background:var(--rust); color:#fff !important; text-decoration:none; padding:8px 14px; border-radius:6px; font-weight:600; font-size:13px; margin:4px 4px 4px 0; }
+  .btn.secondary { background:var(--ocean); }
+  .btn.olive { background:var(--olive); }
+  ul.notes { padding-left:18px; margin:6px 0; font-size:14px; }
+  ul.notes li { margin-bottom:4px; }
+  .footnote { font-size:12px; color:var(--slate); margin-top:38px; padding-top:16px; border-top:1px solid var(--rule); }
+  .nav { background:var(--sand); border-radius:6px; padding:12px 14px; margin:0 0 20px; font-size:13px; position:sticky; top:8px; z-index:10; }
+  .nav a { color:var(--rust-dark); text-decoration:none; margin-right:14px; font-weight:600; }
+  .switcher { background:#fff; border:1px solid var(--rule); border-radius:6px; padding:10px 14px; margin:0 0 20px; font-size:13px; }
+  .switcher a { color:var(--rust-dark); font-weight:600; text-decoration:none; margin-right:14px; }
+  .callout { background:#fff7ec; border-left:4px solid var(--gold); padding:12px 16px; margin:14px 0; border-radius:4px; font-size:14px; }
+  .callout strong { color:var(--rust-dark); }
+  #lb { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.94); z-index:9999; align-items:center; justify-content:center; padding:24px; cursor:zoom-out; }
+  #lb.active { display:flex; }
+  #lb img { max-width:96vw; max-height:92vh; object-fit:contain; border-radius:4px; box-shadow:0 8px 32px rgba(0,0,0,0.6); }
+  #lb .close-hint { position:absolute; top:18px; right:20px; color:rgba(255,255,255,0.7); font-size:28px; font-weight:300; cursor:pointer; line-height:1; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="switcher"><strong>Compare:</strong>
+  <a href="index.html">← All options</a>
+  <a href="andalucia.html">Andalucía (B)</a>
+  <a href="portugal.html">Portugal nature (C)</a>
+  <span style="color:var(--ink);"><strong>You are here</strong> · Cove coast (D)</span>
+  <a href="portugal-best-beaches.html">Top beaches tour (E) →</a>
+</div>
+
+<header class="cover">
+  <div class="badge">Itinerary v1 · Algarve cove coast · Option D</div>
+  <h1>Algarve Cove Coast + Monchique Mountains</h1>
+  <p class="sub">July 21 → August 1, 2026 · 4A + 1C · 11 nights · Fly CDG↔FAO · Train + 1 short bus</p>
+</header>
+
+<nav class="nav">
+  <a href="#overview">Overview</a>
+  <a href="#lagos">Lagos</a>
+  <a href="#carvoeiro">Carvoeiro</a>
+  <a href="#monchique">Monchique</a>
+  <a href="#logistics">Logistics</a>
+</nav>
+
+<section id="overview">
+  <h2>The arc at a glance</h2>
+  <div class="fact-grid">
+    <div class="fact"><p class="label">Total nights</p><p class="value">11</p></div>
+    <div class="fact"><p class="label">Stops</p><p class="value">3 Airbnbs</p></div>
+    <div class="fact"><p class="label">Beach style</p><p class="value">Golden cove</p></div>
+    <div class="fact"><p class="label">Top-rated beaches</p><p class="value">6+</p></div>
+    <div class="fact"><p class="label">Hike days</p><p class="value">2+</p></div>
+    <div class="fact"><p class="label">Internal flights</p><p class="value">0</p></div>
+  </div>
+  <p>This arc is built around the <strong>Dona Ana aesthetic</strong> — golden sand in sheltered coves framed by sandstone cliffs and rock stacks. We anchor at Lagos for the western cove cluster (Dona Ana, Camilo, Pinhão, Ponta da Piedade), shift 25 min east to Carvoeiro for the eastern cluster (<strong>Praia da Marinha</strong> — voted #1 beach in Europe — Benagil sea cave, Carvalho, Algar Seco), then finish inland at Monchique for the eucalyptus mountains, Foia summit, and thermal springs — the green contrast after a week on the cliffs.</p>
+  <div class="callout"><strong>Why this beats the rest of the Algarve:</strong> Carvoeiro/Lagoa coast is noticeably quieter than Albufeira/Vilamoura (no resorts, smaller towns) while having the most photogenic beaches in Portugal. Monchique is 30 min inland but feels like a different country — cooler air, mountain food, no tourist crowd.</p>
+  <p style="font-size:13px; color:var(--slate);"><em>Tap any image to expand.</em></p>
+</section>
+
+<!-- STOP 1: LAGOS -->
+<section class="stop" id="lagos">
+  <h2>Stop 1 · Lagos &amp; the western cove cluster</h2>
+  <p class="stop-meta"><strong>Jul 21 – 25 · 4 nights</strong> · Walled Old Town, marina, six cove beaches walkable or short drive from base</p>
+
+  <img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/5/52/Vista_Centro_Hist%C3%B3rico_de_Lagos_%28cropped%29.jpg" alt="Lagos Old Town">
+
+  <div class="pillrow">
+    <span class="pill beach">Praia Dona Ana</span>
+    <span class="pill beach">Camilo · Pinhão · Porto de Mos</span>
+    <span class="pill nature">Ponta da Piedade sea caves</span>
+    <span class="pill culture">Walled Old Town</span>
+  </div>
+
+  <h4>Why here</h4>
+  <p>Lagos is the family-friendly Algarve cove hub. Praia Dona Ana sits 10 min walk from the Old Town and is the cover-photo Algarve beach you've seen everywhere. Within 10 min by foot or short taxi you also have Camilo, Pinhão, Porto de Mos, and the dramatic Ponta da Piedade headland with its kayak-accessible sea caves.</p>
+
+  <div class="photo-grid">
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Ponta_da_Piedade_aerial_view.jpg" alt="Ponta da Piedade aerial">
+      <figcaption>Ponta da Piedade · sandstone formations and caves</figcaption>
+    </figure>
+  </div>
+
+  <h4>Day by day</h4>
+
+  <div class="day"><div class="head">Tue Jul 21 · Arrival</div>
+    <ul class="activities">
+      <li>Morning flight CDG → Faro · 2h45 direct AF/TAP/Vueling</li>
+      <li>Train Faro → Lagos · 1h45 along the Algarve line (~€10 pp)</li>
+      <li>Check in, lunch at <em>A Forja</em> — local lunch spot, generous Portuguese cooking</li>
+      <li>Easy walk to <strong>Praia da Batata</strong> right under the Old Town walls for first swim</li>
+      <li>Sunset over the marina, dinner at <em>Adega da Marina</em></li>
+    </ul>
+  </div>
+
+  <div class="day"><div class="head">Wed Jul 22 · Dona Ana + Camilo day</div>
+    <ul class="activities">
+      <li>10-min walk (or 5-min taxi) S to <strong>Praia Dona Ana</strong> — golden cove flanked by rock stacks, soft sand, calm protected water</li>
+      <li>Cliff path 5 min S to <strong>Praia do Camilo</strong> — stairs down to a smaller twin cove (200 steps; worth it)</li>
+      <li>Lunch at <em>O Camilo</em> restaurant overlooking the beach</li>
+      <li>Afternoon swim, then the cliff path 10 min further to <strong>Praia do Pinhão</strong> — the locals' quieter option</li>
+    </ul>
+  </div>
+
+  <div class="day"><div class="head">Thu Jul 23 · Ponta da Piedade + kayak</div>
+    <ul class="activities">
+      <li>Walk or short taxi to <strong>Ponta da Piedade</strong> headland — sandstone cliffs, rock arches, lighthouse</li>
+      <li><strong>Kayak or SUP tour</strong> through the sea caves from the marina (~€25 pp, 2h, includes drop-off snorkel stops) — book at the marina day of</li>
+      <li>Lunch back in town at <em>Mar D'Estórias</em> rooftop</li>
+      <li>Long beach afternoon at <strong>Porto de Mos</strong> — wide sandy + cliff backdrop, 5 min taxi S</li>
+    </ul>
+  </div>
+
+  <div class="day"><div class="head">Fri Jul 24 · Lazy + Praia da Luz</div>
+    <ul class="activities">
+      <li>Sleep in. Lazy morning, café in the Old Town square</li>
+      <li>10-min bus W to <strong>Praia da Luz</strong> — classic wide family beach with calm water and a sea-side promenade</li>
+      <li>Lunch at <em>Restaurante Mar Bravo</em></li>
+      <li>Optional afternoon Slave Market Museum (the 15-min sobering history lesson Lagos owes you)</li>
+      <li>Final Lagos dinner at <em>Casinha do Petisco</em> — book ahead, tiny, hand-made tapas</li>
+    </ul>
+  </div>
+
+  <div class="transit"><strong>Sat Jul 25 — transit day:</strong> Lagos → Carvoeiro · 25-min train Lagos→Estômbar/Lagoa station + 15-min taxi or bus (~€15) to Carvoeiro. Total ~1h door-to-door. Easy.</div>
+</section>
+
+<!-- STOP 2: CARVOEIRO -->
+<section class="stop" id="carvoeiro">
+  <h2>Stop 2 · Carvoeiro &amp; the eastern cove cluster</h2>
+  <p class="stop-meta"><strong>Jul 25 – 29 · 4 nights</strong> · Quieter than Lagos · Praia da Marinha + Benagil + Carvalho + Algar Seco</p>
+
+  <img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/4/40/Carvoeiro_20050729.jpg" alt="Carvoeiro fishing village">
+
+  <div class="pillrow">
+    <span class="pill beach">Praia da Marinha (#1 in Europe)</span>
+    <span class="pill beach">Praia do Carvalho · hidden cove</span>
+    <span class="pill nature">Benagil sea cave</span>
+    <span class="pill hike">Algar Seco coastal walk</span>
+  </div>
+
+  <h4>Why here</h4>
+  <p>Carvoeiro is a former fishing village that became a small low-key beach town. The coastline E of here has the most concentrated set of dramatic cove beaches in Portugal — <strong>Praia da Marinha</strong> (consistently voted top beach in Europe), <strong>Praia do Carvalho</strong> (hidden, accessed through a tunnel cut in the cliff), the <strong>Benagil sea cave</strong> (kayak through the cave's beach inside the cliff), and the <strong>Algar Seco</strong> rock formations you can walk through on a boardwalk.</p>
+
+  <div class="photo-grid four">
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Praia_da_Marinha_%282012-09-27%29%2C_by_Klugschnacker_in_Wikipedia_%2886%29.JPG" alt="Praia da Marinha">
+      <figcaption>Praia da Marinha — #1 beach in Europe (Michelin)</figcaption>
+    </figure>
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/7/72/Falesia_Beach_seen_from_sea.JPG" alt="Praia da Falésia">
+      <figcaption>Praia da Falésia · 6 km of red cliffs (day trip)</figcaption>
+    </figure>
+  </div>
+
+  <h4>Day by day</h4>
+
+  <div class="day"><div class="head">Sat Jul 25 · Arrival + Algar Seco walk</div>
+    <ul class="activities">
+      <li>Settle in Carvoeiro, lunch at <em>Bon Bon</em> Michelin spot (book ahead) or casual <em>O Lampião</em></li>
+      <li>Walk the <strong>Algar Seco</strong> boardwalk — 1 km coastal path through eroded sandstone formations, swim spots along the way</li>
+      <li>Evening swim at <strong>Praia do Carvoeiro</strong> right in town</li>
+      <li>Dinner at <em>Restaurante O Castelo</em> with cliff-edge sunset</li>
+    </ul>
+  </div>
+
+  <div class="day"><div class="head">Sun Jul 26 · Praia da Marinha</div>
+    <ul class="activities">
+      <li>15-min drive E to <strong>Praia da Marinha</strong> — park at the top, descend the wooden stairs to soft sand and clear turquoise water</li>
+      <li>The Sete Vales Suspensos (Seven Hanging Valleys) trail starts here — easy cliff-top walk to other secret beaches if you want a hike day</li>
+      <li>Lunch at the cliff-top café above Marinha</li>
+      <li>Afternoon back in Carvoeiro, swim at Praia do Paraíso (the local hidden cove)</li>
+    </ul>
+  </div>
+
+  <div class="day"><div class="head">Mon Jul 27 · Benagil sea cave</div>
+    <ul class="activities">
+      <li>10-min drive E to <strong>Benagil</strong> village</li>
+      <li><strong>Kayak or SUP tour into the Benagil sea cave</strong> — the cathedral-domed cave with its own beach inside, sunlight pouring through the natural ceiling oculus · book a guided tour from Benagil beach (~€30 pp, 1.5h)</li>
+      <li>Lunch at <em>O Pescador</em> on Benagil beach</li>
+      <li>Afternoon at <strong>Praia do Carvalho</strong> — 5 min E, access via tunnel cut in the cliff, secluded soft-sand cove</li>
+    </ul>
+  </div>
+
+  <div class="day"><div class="head">Tue Jul 28 · Falésia day trip</div>
+    <ul class="activities">
+      <li>Drive 30 min E to <strong>Praia da Falésia</strong> — 6 km uninterrupted sand backed by dramatic red-and-white cliff striped formations · walk the whole stretch if you've got it in you</li>
+      <li>Lunch at one of the cliff-top restaurants in Olhos d'Água village</li>
+      <li>Back to Carvoeiro late afternoon for a final swim</li>
+      <li>Farewell dinner at <em>Restaurante Boneca Bar</em> tucked under the Algar Seco cliffs</li>
+    </ul>
+  </div>
+
+  <div class="transit"><strong>Wed Jul 29 — transit day:</strong> Carvoeiro → Monchique · 15-min taxi to Lagoa or Portimão station, then 45-min bus on Vamus from Portimão → Monchique town (~€5 pp). Total ~1h30. Or rent a car for this leg — much easier in the mountains.</div>
+</section>
+
+<!-- STOP 3: MONCHIQUE -->
+<section class="stop" id="monchique">
+  <h2>Stop 3 · Monchique mountains</h2>
+  <p class="stop-meta"><strong>Jul 29 – Aug 1 · 3 nights</strong> · Interior Algarve · cooler air · eucalyptus and cork-oak forest · Foia summit · thermal springs</p>
+
+  <img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Monchique_-_19.09.2019.jpg" alt="Monchique mountain town">
+
+  <div class="pillrow">
+    <span class="pill hike">Foia summit (902m)</span>
+    <span class="pill nature">Serra de Monchique forest</span>
+    <span class="pill food">Caldas de Monchique thermal springs</span>
+    <span class="pill culture">Mountain villages + medronho</span>
+  </div>
+
+  <h4>Why here</h4>
+  <p>After a week of cove beaches, Monchique is the green palate cleanser. The Serra de Monchique is the only real mountain range in the Algarve — eucalyptus, cork-oak, and chestnut forest, with <strong>Foia</strong> as the highest peak (902m, panoramic view from the Algarve coast to the Alentejo plains). Caldas de Monchique is a tiny thermal-spring spa village in a hidden valley with Roman-era hot baths. The pace shifts: cooler air, slower meals, local medronho (strawberry-tree firewater).</p>
+
+  <div class="photo-grid">
+    <figure>
+      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Serra_de_Monchique.JPG" alt="Serra de Monchique mountains">
+      <figcaption>Serra de Monchique · cork-oak and eucalyptus forest</figcaption>
+    </figure>
+  </div>
+
+  <h4>Day by day</h4>
+
+  <div class="day"><div class="head">Wed Jul 29 · Arrival + Caldas de Monchique</div>
+    <ul class="activities">
+      <li>Arrive Monchique, settle in (Airbnbs in old farmhouses on the hillsides are the move)</li>
+      <li>5 km S to <strong>Caldas de Monchique</strong> — Roman-era thermal spring village in a steep wooded valley</li>
+      <li>Hot springs and spa at <em>Termas de Monchique</em> (book ahead in summer) — soak, then dinner in the tiny plaza below</li>
+    </ul>
+  </div>
+
+  <div class="day"><div class="head">Thu Jul 30 · Foia summit hike</div>
+    <ul class="activities">
+      <li>Drive 8 km up to <strong>Foia</strong>, the Algarve's highest point (902m) — on clear mornings you see Cabo de São Vicente, the coast, and N to the Alentejo plains</li>
+      <li>Hike: the loop from Foia down to the springs of the Rio Boina is ~3h, dropping through laurel forest</li>
+      <li>Easy alternative: drive to Foia, walk the short summit loop (30 min), then a relaxed lunch at <em>Restaurante a Charrette</em> in Monchique village</li>
+      <li>Afternoon market in Monchique — local cheese, honey, medronho, smoked meats</li>
+    </ul>
+  </div>
+
+  <div class="day"><div class="head">Fri Jul 31 · Slow day</div>
+    <ul class="activities">
+      <li>Easy hike from Monchique town to the convent ruins (Nossa Senhora do Desterro) — 30-min uphill, eucalyptus shade, views E into the Algarve</li>
+      <li>Lunch at <em>Restaurante O Luar da Foia</em> — mountain piri-piri chicken, local red wine</li>
+      <li>Optional: one more thermal soak at Caldas, or drive down to Praia da Rocha (45 min) for a final coast beach day</li>
+      <li>Final mountain dinner at <em>Jardim das Oliveiras</em></li>
+    </ul>
+  </div>
+
+  <div class="transit"><strong>Sat Aug 1 — exit:</strong> Bus Monchique → Portimão (45 min) · train Portimão → Faro (1h) · taxi 15 min to Faro airport · fly FAO → CDG (2h45 direct AF). Total ~5h. Aug 1–2 at sister's, Aug 3 CDG → KRK as planned.</div>
+</section>
+
+<section id="logistics">
+  <h2>Logistics &amp; bookings</h2>
+
+  <h3>Flights</h3>
+  <ul class="notes">
+    <li>CDG → FAO Jul 21 + FAO → CDG Aug 1 · Air France or Vueling/TAP direct · ~$1,600 family RT · 2h45 each way</li>
+  </ul>
+
+  <h3>Trains + bus</h3>
+  <p>CP for trains (<a href="https://www.cp.pt/passageiros/en" class="btn secondary">CP Comboios</a>); Vamus for the Monchique bus (<a href="https://vamus.pt/en/" class="btn secondary">Vamus</a>).</p>
+  <ul class="notes">
+    <li>Faro airport → Lagos (train): ~€12 pp · €60 family · 1h45 incl. airport bus to Faro station</li>
+    <li>Lagos → Carvoeiro (train + taxi via Lagoa): ~€10 pp · €50 family · 40 min</li>
+    <li>Carvoeiro → Monchique (taxi + Vamus from Portimão): ~€10 pp · €50 family · 1h30</li>
+    <li>Monchique → Faro airport (return): ~€18 pp · €90 family</li>
+    <li><strong>Total ground transport:</strong> ~€250 / ~$370 CAD</li>
+  </ul>
+
+  <h3>Optional: rental car</h3>
+  <p>For Stop 2 (Carvoeiro) and Stop 3 (Monchique), a car opens up Marinha/Benagil/Falésia and the Foia drive. Pick up at Lagos on Jul 25, drop at Faro airport on Aug 1. ~€250–400 for 7 days.</p>
+
+  <h3>Must-book-ahead</h3>
+  <ul class="notes">
+    <li>Benagil sea cave kayak tour — book day-of at Benagil beach</li>
+    <li>Termas de Monchique spa — book 2 days ahead in summer</li>
+    <li>Bon Bon Michelin restaurant (Carvoeiro) — book 2 weeks ahead</li>
+  </ul>
+
+  <h3>Airbnbs — browse live</h3>
+  <a class="btn" href="https://www.airbnb.com/s/Lagos--Portugal/homes?check_in=2026-07-21&check_out=2026-07-25&adults=4&children=1&min_bedrooms=3">Browse Lagos 3BR</a>
+  <a class="btn" href="https://www.airbnb.com/s/Carvoeiro--Portugal/homes?check_in=2026-07-25&check_out=2026-07-29&adults=4&children=1&min_bedrooms=3">Browse Carvoeiro 3BR</a>
+  <a class="btn" href="https://www.airbnb.com/s/Monchique--Portugal/homes?check_in=2026-07-29&check_out=2026-08-01&adults=4&children=1&min_bedrooms=3">Browse Monchique 3BR</a>
+</section>
+
+<div class="footnote">Generated 2026-05-13 by Morgan · Option D · Algarve cove coast + Monchique mountains</div>
+
+</div>
+
+<div id="lb"><span class="close-hint">×</span><img src="" alt=""></div>
+<script>
+(function(){var lb=document.getElementById('lb'),lbImg=lb.querySelector('img');document.querySelectorAll('img[data-lightbox]').forEach(function(img){img.addEventListener('click',function(){lbImg.src=img.src;lbImg.alt=img.alt||'';lb.classList.add('active');document.body.style.overflow='hidden';});});lb.addEventListener('click',function(){lb.classList.remove('active');lbImg.src='';document.body.style.overflow='';});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('active')){lb.classList.remove('active');lbImg.src='';document.body.style.overflow='';}});})();
+</script>
+</body>
+</html>
