@@ -3,42 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chosen Arc · Tavira → Lagos → Cádiz · Jul 21 → Aug 1, 2026</title>
+<title>Option H · Lagos → Sevilla → Granada/Sierra Nevada · Jul 21 → Aug 1, 2026</title>
 <style>
-  :root { --cream:#faf6ef; --ink:#1f1a13; --rust:#b85428; --rust-dark:#8c3d1d; --olive:#6e7c4a; --sand:#ede4d2; --slate:#4a4239; --rule:#d9cfb9; --ocean:#2a6f7a; --gold:#c89030; }
+  :root { --cream:#faf6ef; --ink:#1f1a13; --rust:#b85428; --rust-dark:#8c3d1d; --olive:#6e7c4a; --sand:#ede4d2; --slate:#4a4239; --rule:#d9cfb9; --ocean:#2a6f7a; --gold:#c89030; --leaf:#3e6b3a; }
   * { box-sizing: border-box; }
-  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; background:var(--cream); color:var(--ink); margin:0; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; background:var(--cream); color:var(--ink); margin:0; line-height:1.65; -webkit-font-smoothing:antialiased; }
   .container { max-width:960px; margin:0 auto; padding:28px 22px 80px; }
-  header.cover { background:linear-gradient(135deg,#2a6f7a 0%,#c89030 60%,#c75a30 100%); color:#fff; padding:64px 36px; border-radius:12px; margin-bottom:28px; }
-  header.cover h1 { font-size:36px; margin:0 0 8px; letter-spacing:-0.02em; line-height:1.12; }
+  header.cover { background:linear-gradient(135deg,#c75a30 0%,#c89030 40%,#3e6b3a 100%); color:#fff; padding:64px 36px; border-radius:12px; margin-bottom:28px; }
+  header.cover h1 { font-size:34px; margin:0 0 8px; letter-spacing:-0.02em; line-height:1.15; }
   header.cover .sub { font-size:15px; opacity:0.94; margin:0; }
   header.cover .badge { display:inline-block; background:rgba(255,255,255,0.2); padding:4px 10px; border-radius:12px; font-size:12px; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:14px; }
   h2 { font-size:24px; color:var(--rust-dark); margin:44px 0 12px; padding-bottom:6px; border-bottom:2px solid var(--rust); }
   h3 { font-size:18px; margin:22px 0 6px; color:var(--ink); }
-  h4 { font-size:14px; margin:14px 0 4px; color:var(--slate); text-transform:uppercase; letter-spacing:0.05em; }
+  h4 { font-size:13px; margin:14px 0 4px; color:var(--slate); text-transform:uppercase; letter-spacing:0.05em; }
   p { margin:6px 0 12px; }
   .fact-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:10px; margin:14px 0 20px; }
   .fact { background:var(--sand); padding:10px 12px; border-radius:6px; border-left:3px solid var(--olive); }
   .fact .label { font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--slate); margin:0 0 2px; }
   .fact .value { font-size:14px; font-weight:600; margin:0; }
-  .stop { background:#fff; border:1px solid var(--rule); border-radius:10px; padding:22px; margin:24px 0; box-shadow:0 2px 6px rgba(0,0,0,0.04); }
-  .stop h2 { margin-top:0; }
-  .stop-meta { font-size:13px; color:var(--slate); margin:-8px 0 16px; }
-  .stop-meta strong { color:var(--ink); }
-  .hero-img { width:100%; height:340px; object-fit:cover; border-radius:8px; display:block; margin-bottom:14px; background:var(--sand); cursor:zoom-in; transition:opacity 0.2s; }
+  .stop-banner { background:#fff; border:1px solid var(--rule); border-radius:10px; padding:22px; margin:30px 0 8px; box-shadow:0 2px 6px rgba(0,0,0,0.04); }
+  .stop-banner h2 { margin:0 0 4px; border:none; padding:0; }
+  .stop-banner .meta { font-size:13px; color:var(--slate); }
+  .hero-img { width:100%; height:340px; object-fit:cover; border-radius:8px; display:block; margin:14px 0; background:var(--sand); cursor:zoom-in; transition:opacity 0.2s; }
   .hero-img:hover { opacity:0.92; }
   .photo-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:10px; margin:12px 0 18px; }
   .photo-grid img { width:100%; height:180px; object-fit:cover; border-radius:6px; display:block; background:var(--sand); cursor:zoom-in; transition:opacity 0.2s; }
   .photo-grid img:hover { opacity:0.92; }
   .photo-grid figure { margin:0; }
   .photo-grid figcaption { font-size:12px; color:var(--slate); padding:4px 2px; }
+  .day { background:#fff; border:1px solid var(--rule); border-left:4px solid var(--leaf); border-radius:8px; padding:16px 20px; margin:14px 0; }
+  .day .date { font-weight:700; color:var(--rust-dark); font-size:13px; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:2px; }
+  .day .head { font-size:19px; font-weight:600; margin:0 0 8px; line-height:1.25; }
+  .day .block { margin:10px 0 4px; }
+  .day .block-label { font-size:12px; text-transform:uppercase; letter-spacing:0.07em; color:var(--leaf); font-weight:700; margin-bottom:4px; }
+  .day .block.lunch .block-label, .day .block.dinner .block-label { color:#7b3a15; }
+  .day .block.fine .block-label { color:var(--rust-dark); }
+  .day .block.transit .block-label { color:var(--ocean); }
+  .day .block.unique .block-label { color:#6b4d8e; }
+  .day .block ul { margin:0; padding-left:18px; font-size:14px; }
+  .day .block ul li { margin-bottom:3px; }
   .transit { background:var(--sand); border-left:3px solid var(--olive); padding:10px 14px; margin:14px 0; border-radius:4px; font-size:13px; }
   .transit strong { color:var(--rust-dark); }
   .pill { display:inline-block; background:var(--sand); color:var(--ink); font-size:12px; padding:3px 10px; border-radius:12px; margin:3px 4px 3px 0; }
   .pill.beach { background:#cae7ec; color:#1e5860; }
-  .pill.culture { background:#e3d0e8; color:#5a3a66; }
-  .pill.food { background:#f3d8c4; color:#7b3a15; }
+  .pill.hike { background:#d9e3c2; color:#404d20; }
   .pill.nature { background:#c7e0c4; color:#1f5226; }
+  .pill.fine { background:#f3d8c4; color:#7b3a15; }
+  .pill.unique { background:#e3d0e8; color:#5a3a66; }
+  .pill.culture { background:#e3d0e8; color:#5a3a66; }
   .listing { background:#fff; border:1px solid var(--rule); border-radius:8px; padding:14px 18px; margin:10px 0; }
   .listing.top { border-left:4px solid var(--rust); }
   .listing h3 { margin:0 0 4px; font-size:16px; }
@@ -50,10 +62,6 @@
   .btn:hover { opacity:0.9; }
   ul.notes { padding-left:18px; margin:6px 0; font-size:14px; }
   ul.notes li { margin-bottom:4px; }
-  table { width:100%; border-collapse:collapse; margin:12px 0 20px; font-size:14px; }
-  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
-  th { background:var(--sand); font-size:13px; }
-  td.right, th.right { text-align:right; }
   .footnote { font-size:12px; color:var(--slate); margin-top:38px; padding-top:16px; border-top:1px solid var(--rule); }
   .nav { background:var(--sand); border-radius:6px; padding:12px 14px; margin:0 0 20px; font-size:13px; position:sticky; top:8px; z-index:10; }
   .nav a { color:var(--rust-dark); text-decoration:none; margin-right:14px; font-weight:600; }
@@ -61,6 +69,8 @@
   .switcher a { color:var(--rust-dark); font-weight:600; text-decoration:none; margin-right:14px; }
   .callout { background:#fff7ec; border-left:4px solid var(--gold); padding:12px 16px; margin:14px 0; border-radius:4px; font-size:14px; }
   .callout strong { color:var(--rust-dark); }
+  .callout.leaf { background:#f0f4e8; border-color:var(--leaf); }
+  .callout.leaf strong { color:var(--leaf); }
   #lb { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.94); z-index:9999; align-items:center; justify-content:center; padding:24px; cursor:zoom-out; }
   #lb.active { display:flex; }
   #lb img { max-width:96vw; max-height:92vh; object-fit:contain; border-radius:4px; box-shadow:0 8px 32px rgba(0,0,0,0.6); }
@@ -72,21 +82,21 @@
 
 <div class="switcher"><strong>Compare:</strong>
   <a href="index.html">← All options</a>
-  <span style="color:var(--ink);"><strong>You are here</strong> · Chosen Arc · booking links</span>
-  <a href="chosen-itinerary.html">Day-by-day itinerary →</a>
+  <span style="color:var(--ink);"><strong>Chosen · Option H</strong> · Lagos → Sevilla → Granada</span>
 </div>
 
 <header class="cover">
-  <div class="badge">Chosen Arc · Cross-border Portugal + Spain · Jul 21 → Aug 1, 2026</div>
-  <h1>Tavira → Lagos → Cádiz · 11 nights of cove + sandbar beaches</h1>
-  <p class="sub">4A + 1C · Fly into Faro / Fly out of Sevilla · Trains within each country · 1 cross-border bus transfer</p>
+  <div class="badge">Chosen Arc · Option H · Portugal coves → Andalucía culture → Sierra Nevada hiking</div>
+  <h1>Lagos → Sevilla → Granada &amp; Sierra Nevada</h1>
+  <p class="sub">Jul 21 → Aug 1, 2026 · 4A + 1C · 11 nights · Fly in Faro / Fly out Málaga · Train + bus · Three distinct stops, one cross-border transfer</p>
 </header>
 
 <nav class="nav">
   <a href="#overview">Overview</a>
-  <a href="#tavira">Tavira (3N)</a>
-  <a href="#lagos">Lagos / Salema (4N)</a>
-  <a href="#cadiz">Cádiz / El Puerto (4N)</a>
+  <a href="#lagos">Lagos (4N)</a>
+  <a href="#sevilla">Sevilla (2N)</a>
+  <a href="#granada">Granada (5N)</a>
+  <a href="#airbnbs">Airbnbs</a>
   <a href="#logistics">Logistics</a>
 </nav>
 
@@ -95,210 +105,468 @@
   <div class="fact-grid">
     <div class="fact"><p class="label">Total nights</p><p class="value">11</p></div>
     <div class="fact"><p class="label">Stops</p><p class="value">3 Airbnbs</p></div>
-    <div class="fact"><p class="label">Countries</p><p class="value">PT + ES</p></div>
-    <div class="fact"><p class="label">Beach style</p><p class="value">Sandbar + cove + dunes</p></div>
+    <div class="fact"><p class="label">Beach days</p><p class="value">4</p></div>
+    <div class="fact"><p class="label">Hike days</p><p class="value">3</p></div>
+    <div class="fact"><p class="label">Culture days</p><p class="value">2</p></div>
     <div class="fact"><p class="label">Internal flights</p><p class="value">0</p></div>
-    <div class="fact"><p class="label">Estimated lodging</p><p class="value">~$5,000 CAD</p></div>
   </div>
-  <p>Land at Faro, ease in on the sandbar beaches and Ria Formosa lagoons of the eastern Algarve, move west to the postcard cove beaches around Lagos for 4 nights, then cross the border into Spain via Sevilla bus to spend the finale on the Costa de la Luz with Cádiz as your hub. Fly home from Sevilla. Three coasts, two countries, one road back to Paris.</p>
-  <div class="callout"><strong>Why this hybrid wins:</strong> hits the postcard cove beaches you wanted (Dona Ana, Camilo, Ponta da Piedade), adds the wider sandy Atlantic of the Spanish side (Bolonia is 1h from El Puerto), avoids backtracking, and the Sevilla airport gives you direct AF flights home with no double-fly hassle.</p>
-  <p style="font-size:13px; color:var(--slate);"><em>Tap any image to expand. Tap any "View on Airbnb" button to jump to the live verified listing with your dates pre-filled.</em></p>
+  <p>Four nights of Algarve cove beaches in Lagos. Two nights in <strong>Sevilla</strong> — the cultural anchor: Cathedral, Real Alcázar, flamenco — done in the cool morning hours, slow afternoons. Five nights in <strong>Granada</strong>, base for the Alhambra (one of the world's most extraordinary buildings) and <strong>Sierra Nevada hiking</strong> — mainland Spain's highest range, with day-trips into the Las Alpujarras white villages on the south face.</p>
+  <div class="callout leaf"><strong>Why this works for nature/hiking priority:</strong> Sierra Nevada has serious hiking — Mulhacén (3,479m, mainland Spain's highest peak) is a one-day refuge-supported climb; the south-face Alpujarras villages (Capileira, Bubión, Pampaneira) sit at 1,400m with networked trails through chestnut forest and Berber-style stone-irrigation channels. Way more dramatic than the Algarve interior, and August is when you actually want to be in the cool mountain air.</p>
 </section>
 
-<!-- STOP 1: TAVIRA -->
-<section class="stop" id="tavira">
-  <h2>Stop 1 · Tavira &amp; Cabanas</h2>
-  <p class="stop-meta"><strong>Jul 21 – 24 · 3 nights</strong> · Eastern Algarve · sandbar beaches via ferry · Ria Formosa lagoon nature</p>
+<!-- STOP 1: LAGOS -->
+<div class="stop-banner" id="lagos">
+  <h2>Stop 1 · Lagos &amp; western Algarve</h2>
+  <p class="meta">Jul 21–25 · 4 nights · Cove beaches · Ponta da Piedade · Sete Vales Suspensos hike · Cabo de São Vicente day trip</p>
+</div>
 
-  <img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Vista_Tavira.jpg" alt="Tavira town view">
+<img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/5/52/Vista_Centro_Hist%C3%B3rico_de_Lagos_%28cropped%29.jpg" alt="Lagos Old Town">
 
-  <div>
-    <span class="pill beach">Ilha de Tavira sandbar</span>
-    <span class="pill nature">Ria Formosa Natural Park</span>
-    <span class="pill culture">Moorish hilltop castle</span>
-    <span class="pill food">Cataplana + Algarve grilled fish</span>
+<div class="photo-grid">
+  <figure><img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Ponta_da_Piedade_aerial_view.jpg" alt="Ponta da Piedade"><figcaption>Ponta da Piedade · sea-cave sandstone formations</figcaption></figure>
+  <figure><img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Praia_da_Marinha_%282012-09-27%29%2C_by_Klugschnacker_in_Wikipedia_%2886%29.JPG" alt="Praia da Marinha"><figcaption>Praia da Marinha · 7 Hanging Valleys hike</figcaption></figure>
+  <figure><img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/b/bc/SaoVicente.JPG" alt="Cabo de São Vicente"><figcaption>Cabo de São Vicente · Europe's land's end</figcaption></figure>
+</div>
+
+<div class="day">
+  <div class="date">Tue Jul 21</div>
+  <div class="head">Arrival + first cove sunset</div>
+  <div><span class="pill">Travel day</span><span class="pill beach">Easy swim</span></div>
+  <div class="block transit"><div class="block-label">Morning · transit</div>
+    <ul>
+      <li>Fly CDG → Faro · 2h45 direct AF/TAP/Vueling</li>
+      <li>CP regional Faro → Lagos · 1h45 (~€10 pp, €50 family)</li>
+      <li>Check in, light unpack — you're here 4 nights</li>
+    </ul>
   </div>
-
-  <h4>Why here</h4>
-  <p>Quiet, working Algarve town. Roman bridge, Moorish castle, whitewashed lanes. Beach access via 5-minute ferry to Ilha de Tavira — 11 km of empty soft sand. The Ria Formosa Natural Park stretches W from here with salt pans, flamingos, and seahorses. Cabanas (5 km E) is the alternate base — quieter again, dedicated ferry to its own sandbar.</p>
-
-  <div class="photo-grid">
-    <figure>
-      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Ria_Formosa_9.JPG" alt="Ria Formosa lagoon">
-      <figcaption>Ria Formosa · 60 km of protected lagoons</figcaption>
-    </figure>
+  <div class="block lunch"><div class="block-label">Lunch</div>
+    <ul><li><em>A Forja</em> in Lagos Old Town — local lunch spot, hearty Portuguese cooking</li></ul>
   </div>
-
-  <h4>Verified Airbnbs · Jul 21–24 · 4A + 1C · 3BR+</h4>
-
-  <div class="listing top">
-    <h3><span class="pill">Top value</span>Teixeira's House · Tavira town</h3>
-    <p class="lmeta">3 BR · 4 beds · 2 baths · 4.78★ (121 reviews) · Free cancellation</p>
-    <p class="lprice">$1,022 CAD · 3 nights</p>
-    <a class="btn" href="https://www.airbnb.com/rooms/49820078?check_in=2026-07-21&check_out=2026-07-24&adults=4&children=1">View on Airbnb</a>
+  <div class="block"><div class="block-label">Late afternoon · first cove</div>
+    <ul>
+      <li>Walk to <strong>Praia da Batata</strong> right under the Old Town walls — first swim</li>
+      <li>Sunset at the cliff lookout at the start of the Ponta da Piedade path</li>
+    </ul>
   </div>
-
-  <div class="listing">
-    <h3>Country House w/ Private Pool · 5 min from Tavira &amp; Beach</h3>
-    <p class="lmeta">3 BR · 4 beds · 1 bath · Superhost · Private pool · Free cancellation</p>
-    <p class="lprice">$1,621 CAD · 3 nights</p>
-    <a class="btn" href="https://www.airbnb.com/rooms/859219259868521234?check_in=2026-07-21&check_out=2026-07-24&adults=4&children=1">View on Airbnb</a>
+  <div class="block dinner"><div class="block-label">Dinner</div>
+    <ul><li><em>Adega da Marina</em> — house white, grilled sardines, the classic</li></ul>
   </div>
+</div>
 
-  <div class="listing">
-    <h3>Spacious Apartment · Sea-view rooftop pool · Olhão</h3>
-    <p class="lmeta">3 BR · 4 beds · 2 baths · Top guest favorite · 20 min drive W of Tavira, walking distance to Olhão ferry to Armona / Culatra sandbars</p>
-    <p class="lprice">$1,204 CAD · 3 nights</p>
-    <a class="btn" href="https://www.airbnb.com/rooms/1133575818193444060?check_in=2026-07-21&check_out=2026-07-24&adults=4&children=1">View on Airbnb</a>
+<div class="day">
+  <div class="date">Wed Jul 22</div>
+  <div class="head">Ponta da Piedade kayak + Dona Ana/Camilo cliff walk</div>
+  <div><span class="pill beach">Cove beaches</span><span class="pill hike">Cliff walk</span><span class="pill unique">Sea-cave kayak</span></div>
+  <div class="block unique"><div class="block-label">Morning · the unique thing</div>
+    <ul>
+      <li>Walk to Lagos marina by 9am — <strong>Ponta da Piedade kayak or SUP tour</strong> through the sandstone sea caves and arches, ~2h, snorkel stops, guide points out hidden coves reachable only from the water (~€25 pp, book day-of)</li>
+    </ul>
   </div>
-
-  <div class="listing">
-    <h3>Home by the Sea · Ocean &amp; Lagoon Views · Faro</h3>
-    <p class="lmeta">4 BR · 4 beds · 2 baths · Guest favorite · Premium pick · 35 min drive W of Tavira</p>
-    <p class="lprice">$2,070 CAD · 3 nights</p>
-    <a class="btn" href="https://www.airbnb.com/rooms/6982295?check_in=2026-07-21&check_out=2026-07-24&adults=4&children=1">View on Airbnb</a>
+  <div class="block lunch"><div class="block-label">Lunch</div>
+    <ul><li><em>Mar D'Estórias</em> rooftop — view over the marina, light Portuguese small plates</li></ul>
   </div>
-
-  <div class="transit"><strong>Fri Jul 24 — transit:</strong> Tavira → Lagos · 2h 30m direct on CP regional Algarve line (~€10 pp, €50 family). One train, no changes. Lunch in Lagos by 1pm.</div>
-</section>
-
-<!-- STOP 2: LAGOS -->
-<section class="stop" id="lagos">
-  <h2>Stop 2 · Lagos · Burgau · Salema</h2>
-  <p class="stop-meta"><strong>Jul 24 – 28 · 4 nights</strong> · Western Algarve · postcard cove beaches · Ponta da Piedade · Burgau/Salema fishing villages</p>
-
-  <img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/5/52/Vista_Centro_Hist%C3%B3rico_de_Lagos_%28cropped%29.jpg" alt="Lagos Old Town">
-
-  <div>
-    <span class="pill beach">Praia Dona Ana · Camilo · Pinhão</span>
-    <span class="pill beach">Praia da Luz · Burgau · Salema</span>
-    <span class="pill nature">Ponta da Piedade sea caves</span>
-    <span class="pill culture">Walled Old Town + Slave Market</span>
+  <div class="block hike"><div class="block-label">Afternoon · cliff walk between four coves</div>
+    <ul>
+      <li>Walk from Praia da Batata → Praia do Pinhão → <strong>Praia Dona Ana</strong> → <strong>Praia do Camilo</strong> · ~1h30 along the cliff trail, swim in each</li>
+      <li>Dona Ana is the postcard cove. Late-afternoon light is best</li>
+      <li>Camilo via 200 steps down to a smaller twin cove for sunset</li>
+    </ul>
   </div>
-
-  <h4>Why here</h4>
-  <p>Lagos is the cove-beach hub: Praia Dona Ana (postcard golden cove), Camilo (down 200 stairs), Pinhão (locals' quieter pick), and the cliff-walking trail along Ponta da Piedade with its sandstone arches. <strong>Burgau and Salema</strong> are smaller fishing villages 15–20 min W with their own sandy bays — quieter than Lagos town, perfect if you want a beach-village base instead of a tourist hub.</p>
-
-  <div class="photo-grid">
-    <figure>
-      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Ponta_da_Piedade_aerial_view.jpg" alt="Ponta da Piedade">
-      <figcaption>Ponta da Piedade · sandstone formations</figcaption>
-    </figure>
+  <div class="block fine dinner"><div class="block-label">Dinner · fine dining anchor</div>
+    <ul><li><strong>Casinha do Petisco</strong> — tiny hand-made tapas, 8 tables, <em>book 2+ days ahead</em> <span class="pill fine">Fine dining</span></li></ul>
   </div>
+</div>
 
-  <h4>Verified Airbnbs · Jul 24–28 · 4A + 1C · 3BR + pool</h4>
+<div class="day">
+  <div class="date">Thu Jul 23</div>
+  <div class="head">Sete Vales Suspensos coastal hike + Benagil sea cave</div>
+  <div><span class="pill hike">7-valley coastal hike</span><span class="pill unique">Benagil cathedral cave</span></div>
+  <div class="block hike"><div class="block-label">Morning · the iconic coastal hike</div>
+    <ul>
+      <li>30-min drive E to <strong>Praia da Marinha</strong> (voted #1 beach in Europe)</li>
+      <li>Start the <strong>Sete Vales Suspensos (Seven Hanging Valleys)</strong> clifftop trail — walk 3 km W to Benagil (~2h round trip). Dramatic cliff views, swimmable secret beaches at each "hanging valley"</li>
+    </ul>
+  </div>
+  <div class="block unique"><div class="block-label">Late morning · the cave</div>
+    <ul><li><strong>Benagil sea cave kayak/SUP tour</strong> — the cathedral-domed cave with sand inside and a natural ceiling oculus (~€30 pp, 1h, book at the beach)</li></ul>
+  </div>
+  <div class="block lunch"><div class="block-label">Lunch · toes in sand</div>
+    <ul><li><em>O Pescador</em> on Benagil beach</li></ul>
+  </div>
+  <div class="block"><div class="block-label">Afternoon · hidden cove</div>
+    <ul><li><strong>Praia do Carvalho</strong> — secluded cove accessed through a tunnel cut in the cliff. Less crowded than Marinha</li></ul>
+  </div>
+  <div class="block fine dinner"><div class="block-label">Dinner · optional Michelin</div>
+    <ul><li><strong>Bon Bon</strong> in Carvoeiro — 1 Michelin star, chef Louis Anjos, modern Portuguese tasting ~€140 pp. <em>Book 2+ weeks ahead</em> <span class="pill fine">Fine dining</span></li></ul>
+  </div>
+</div>
+
+<div class="day">
+  <div class="date">Fri Jul 24</div>
+  <div class="head">Sagres + Cabo de São Vicente · Europe's end</div>
+  <div><span class="pill beach">Wild Atlantic</span><span class="pill hike">Rota Vicentina</span><span class="pill unique">Westernmost point</span></div>
+  <div class="block"><div class="block-label">Morning · land's-end drive</div>
+    <ul>
+      <li>30-min drive W to Sagres — wind-scoured surf village at the SW corner of mainland Europe</li>
+      <li><strong>Praia do Beliche</strong> — sheltered cove, soft sand, Atlantic swell (80 stairs down)</li>
+    </ul>
+  </div>
+  <div class="block hike"><div class="block-label">Late morning · Rota Vicentina cliff walk</div>
+    <ul>
+      <li>Drive 6 km W to <strong>Cabo de São Vicente</strong> — Europe's southwesternmost point, 75m cliffs, working lighthouse</li>
+      <li>Walk a 1–2 km section of the <strong>Rota Vicentina / Fisherman's Trail</strong> along the cliffs — flat, dramatic, fishermen casting from terrifying cliff-edge positions</li>
+      <li>Buy "the last sausage roll before America" from the lighthouse food truck — they lean into the gag</li>
+    </ul>
+  </div>
+  <div class="block lunch"><div class="block-label">Lunch · percebes</div>
+    <ul><li><em>A Tasca</em> in Sagres harbour — order <strong>percebes</strong> (gooseneck barnacles) + tuna steak</li></ul>
+  </div>
+  <div class="block"><div class="block-label">Afternoon · Carrapateira sunset</div>
+    <ul>
+      <li>20-min drive N to <strong>Praia da Bordeira / Carrapateira</strong> — vast tidal sand plain with a river-mouth lagoon, wild Atlantic surf, almost empty</li>
+      <li>Drive back to Cabo de São Vicente for sunset — bring a thermos of wine</li>
+    </ul>
+  </div>
+  <div class="block dinner"><div class="block-label">Dinner</div>
+    <ul><li><em>Mum's</em> in Sagres for surfer-crowd fresh-fish bowls, or back to Lagos for <em>Casinha do Petisco</em> if you didn't book Wed</li></ul>
+  </div>
+</div>
+
+<div class="day">
+  <div class="date">Sat Jul 25</div>
+  <div class="head">Cross-border transit · Portugal → Spain</div>
+  <div class="block transit"><div class="block-label">Travel day</div>
+    <ul>
+      <li>Early CP train Lagos → Faro · 1h45 (~€10 pp)</li>
+      <li>ALSA direct bus Faro → Sevilla · 3h — crosses the Guadiana river border at Vila Real de Santo António (~€20 pp, €100 family, book on alsa.com a week ahead)</li>
+      <li>Check in by late afternoon, evening orientation walk</li>
+    </ul>
+  </div>
+  <div class="block dinner"><div class="block-label">Dinner · arrival</div>
+    <ul><li><em>Las Golondrinas II</em> for Sevilla-style tapas — papas aliñás, pringá, manzanilla sherry</li></ul>
+  </div>
+</div>
+
+<!-- STOP 2: SEVILLA -->
+<div class="stop-banner" id="sevilla">
+  <h2>Stop 2 · Sevilla — cultural anchor</h2>
+  <p class="meta">Jul 25–27 · 2 nights · Cathedral + Real Alcázar + Plaza de España + flamenco · day-trip option to Córdoba</p>
+</div>
+
+<img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Sevilla_Cathedral_-_Southeast.jpg" alt="Sevilla Cathedral and Giralda">
+
+<div class="photo-grid">
+  <figure><img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Sevilla-2-2_%2848040287512%29-edit.jpg" alt="Real Alcázar"><figcaption>Real Alcázar · Mudéjar palace</figcaption></figure>
+  <figure><img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Plaza_de_Espa%C3%B1a_%28Sevilla%29_-_01.jpg" alt="Plaza de España"><figcaption>Plaza de España · canal + tile murals</figcaption></figure>
+</div>
+
+<div class="callout"><strong>Heat strategy:</strong> Sevilla in late July hits 38–42°C. Mornings outdoors (before 11am), long siesta indoors, evenings on rooftops. Book Cathedral + Alcázar for 9–10am entries.</div>
+
+<div class="day">
+  <div class="date">Sun Jul 26</div>
+  <div class="head">Cathedral + Alcázar + flamenco</div>
+  <div><span class="pill culture">UNESCO heritage</span><span class="pill fine">Flamenco</span></div>
+  <div class="block"><div class="block-label">Morning · early entry</div>
+    <ul>
+      <li>9am sharp at the <strong>Cathedral + Giralda climb</strong> — Gothic mass, world's largest altarpiece, Columbus's tomb. Climb the Giralda's 35 ramps (no stairs — built for horses)</li>
+      <li>10:30am at the <strong>Real Alcázar</strong> — Mudéjar palace with gardens that doubled as Dorne in Game of Thrones. Book skip-the-line online a week ahead</li>
+    </ul>
+  </div>
+  <div class="block lunch"><div class="block-label">Lunch + siesta</div>
+    <ul><li><em>Bar Alfalfa</em> for tapas, then long siesta at the Airbnb</li></ul>
+  </div>
+  <div class="block"><div class="block-label">Late afternoon · Plaza de España</div>
+    <ul>
+      <li>5pm at <strong>Plaza de España</strong> — boat ride in the canal (~€6), tile murals of every Spanish province</li>
+      <li>Walk through María Luisa park back to centre</li>
+    </ul>
+  </div>
+  <div class="block fine dinner"><div class="block-label">Dinner + flamenco</div>
+    <ul><li><strong>Casa de la Memoria</strong> — small intimate flamenco peña (book ahead). Tapas crawl in Triana across the river before or after — <em>Las Golondrinas</em>, <em>Casa Cuesta</em></li></ul>
+  </div>
+</div>
+
+<div class="day">
+  <div class="date">Mon Jul 27</div>
+  <div class="head">Morning Sevilla wrap + transit to Granada</div>
+  <div class="block"><div class="block-label">Morning · Triana market</div>
+    <ul>
+      <li>Cross to Triana neighborhood, wander the Mercado de Triana (food market in the old Inquisition castle vaults)</li>
+      <li>Coffee + churros at <em>Bar El Comercio</em></li>
+    </ul>
+  </div>
+  <div class="block transit"><div class="block-label">Afternoon · Renfe AVE to Granada</div>
+    <ul>
+      <li>Renfe AVE Sevilla Santa Justa → Granada · 2h 45m direct (~€35 pp, €175 family)</li>
+      <li>Arrive Granada by 5pm, check in, sunset walk to Mirador de San Nicolás (Albaicín) — the classic Alhambra-at-sunset view</li>
+    </ul>
+  </div>
+  <div class="block dinner"><div class="block-label">Dinner · Granada-style tapas</div>
+    <ul><li>Granada is the only Spanish city where <strong>every drink comes with a free tapa</strong> still — sit at any bar in the Albaicín or around Plaza Nueva, order drinks, food arrives gratis. <em>Bar Los Diamantes</em>, <em>Bodegas Castañeda</em>, <em>Bar Avila</em> are the locals' rotation</li></ul>
+  </div>
+</div>
+
+<!-- STOP 3: GRANADA -->
+<div class="stop-banner" id="granada">
+  <h2>Stop 3 · Granada &amp; Sierra Nevada</h2>
+  <p class="meta">Jul 27–Aug 1 · 5 nights · Alhambra + Albaicín + Sierra Nevada high-altitude hiking + Las Alpujarras white villages</p>
+</div>
+
+<img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/d/de/Dawn_Charles_V_Palace_Alhambra_Granada_Andalusia_Spain.jpg" alt="Alhambra at dawn">
+
+<div class="photo-grid">
+  <figure><img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/1/12/Alcazaba%2C_Punta_de_la_Cornisa_y_Mulhac%C3%A9n_3.479_m.jpg" alt="Mulhacén peak"><figcaption>Mulhacén · 3,479m · mainland Spain's highest</figcaption></figure>
+  <figure><img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Capileira_seen_from_the_Sulayr_Trail_%28DSCF5861%29.jpg" alt="Capileira village"><figcaption>Capileira · white village in Las Alpujarras</figcaption></figure>
+  <figure><img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Sierra_Nevada_desde_el_embalse_del_Cubillas%2C_en_Atarfe_%28Granada%29.jpg" alt="Sierra Nevada"><figcaption>Sierra Nevada · the high range</figcaption></figure>
+</div>
+
+<div class="day">
+  <div class="date">Tue Jul 28</div>
+  <div class="head">Alhambra · the building itself</div>
+  <div><span class="pill culture">UNESCO masterpiece</span><span class="pill unique">Nasrid Palaces</span></div>
+  <div class="block"><div class="block-label">Morning · Alhambra timed entry</div>
+    <ul>
+      <li><strong>Book months ahead</strong> at alhambra-patronato.es — Nasrid Palaces have a strict timed entry slot, sells out 6–8 weeks ahead in summer. Get the 8:30 or 9am slot to beat heat + crowds</li>
+      <li>Walking sequence: Alcazaba fortress (military), Nasrid Palaces (the masterpiece — Court of the Lions, Hall of the Ambassadors), Generalife gardens. Plan 4h on-site</li>
+    </ul>
+  </div>
+  <div class="block lunch"><div class="block-label">Lunch + siesta</div>
+    <ul><li>Drop down to <em>El Trillo</em> in Albaicín — small terrace, Granadino cuisine. Long lunch + nap</li></ul>
+  </div>
+  <div class="block unique"><div class="block-label">Evening · Sacromonte + zambra flamenco</div>
+    <ul>
+      <li>Walk to <strong>Sacromonte</strong> neighborhood — the historic Roma/gitano caves dug into the hillside</li>
+      <li><strong>Cave flamenco</strong> at <em>Cuevas Los Tarantos</em> or <em>Venta El Gallo</em> — this is the original zambra style, raw, performed inside whitewashed cave rooms <span class="pill unique">Unique</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="day">
+  <div class="date">Wed Jul 29</div>
+  <div class="head">Sierra Nevada hike day · Hoya de la Mora / Veleta</div>
+  <div><span class="pill hike">3,000m+ alpine hike</span><span class="pill nature">National park</span></div>
+  <div class="block hike"><div class="block-label">Morning · drive up</div>
+    <ul>
+      <li>45-min drive (or shuttle bus) from Granada up to <strong>Hoya de la Mora</strong> at 2,500m — the high trailhead</li>
+      <li>Hike to <strong>Pico Veleta</strong> (3,396m, mainland Spain's 4th-highest) — 4h round trip, ~700m vertical, technically class-1 walking. Or do the easier 2h loop around Laguna de las Yeguas</li>
+      <li><strong>If you want the headline summit:</strong> Mulhacén (3,479m) is a longer, more committed day — typically done from the Refugio Poqueira (1 night refuge stay) or via the high-altitude shuttle from Capileira. Doable as a one-day push but starts pre-dawn</li>
+    </ul>
+  </div>
+  <div class="block lunch"><div class="block-label">Lunch · mountain refuge</div>
+    <ul><li>Eat from the pack at the summit, or descend to <em>Albergue Universitario</em> at Hoya de la Mora for hot soup</li></ul>
+  </div>
+  <div class="block"><div class="block-label">Afternoon · descent + thermal bath</div>
+    <ul>
+      <li>Back in Granada by 4pm — book a session at <strong>Hammam Al Ándalus</strong>, the modern reproduction of the medieval Arab baths (~€40 pp, 90 min, advance booking required)</li>
+    </ul>
+  </div>
+  <div class="block dinner"><div class="block-label">Dinner</div>
+    <ul><li><em>Carmela Restaurante</em> — modern Andalusian tapas, near the Cathedral</li></ul>
+  </div>
+</div>
+
+<div class="day">
+  <div class="date">Thu Jul 30</div>
+  <div class="head">Las Alpujarras · Berber-irrigation white villages</div>
+  <div><span class="pill hike">Village-to-village trail</span><span class="pill culture">Berber heritage</span><span class="pill food">Mountain cuisine</span></div>
+  <div class="block"><div class="block-label">Morning · drive S over the sierra</div>
+    <ul>
+      <li>1h30 drive S from Granada into Las Alpujarras — the south face of Sierra Nevada, with Berber-style stone irrigation channels (acequias) that haven't changed in 800 years</li>
+      <li>Stop at <strong>Pampaneira</strong> (1,058m) for chocolate at <em>Abuela Ili</em>, then continue to <strong>Bubión</strong> + <strong>Capileira</strong> (1,436m) — the highest three of the Poqueira gorge villages</li>
+    </ul>
+  </div>
+  <div class="block hike"><div class="block-label">Late morning · village-to-village hike</div>
+    <ul>
+      <li>Walk the classic <strong>Poqueira gorge loop</strong>: Capileira → down to the river → up to Bubión → back to Capileira (~3h, 9 km, ~400m descent + climb). Chestnut forest, irrigation acequias, Sierra Nevada views the whole way</li>
+      <li>Alternative shorter: Pampaneira → Bubión via the GR-7 trail (1h30, mostly downhill)</li>
+    </ul>
+  </div>
+  <div class="block lunch"><div class="block-label">Lunch · the mountain plate</div>
+    <ul><li><em>La Fragua II</em> in Trevélez (highest village in Spain, 1,476m) — order the <strong>jamón de Trevélez</strong> (mountain-cured ham, the cold dry air does the curing), local trout, ajoblanco, Alpujarran wine. Worth the extra 20-min drive E</li></ul>
+  </div>
+  <div class="block"><div class="block-label">Afternoon · slow descent</div>
+    <ul>
+      <li>Drive back N stopping at the Mirador del Cerecillo lookout</li>
+      <li>Optional: <em>Lanjarón</em> (water-bottling town, mineral hot springs)</li>
+    </ul>
+  </div>
+  <div class="block dinner"><div class="block-label">Dinner · back in Granada</div>
+    <ul><li><em>Damasqueros</em> — modern Granadino tasting menu, small, well-priced, the chef's mother is from Sevilla and the abuela is from Granada · or simpler: rotate tapas bars in Albaicín for free-tapa night #2</li></ul>
+  </div>
+</div>
+
+<div class="day">
+  <div class="date">Fri Jul 31</div>
+  <div class="head">Choose: 2nd Sierra hike OR Albaicín slow day</div>
+  <div><span class="pill hike">Optional hike</span><span class="pill culture">Slow exploration</span></div>
+  <div class="block"><div class="block-label">Option A · second Sierra Nevada hike</div>
+    <ul>
+      <li><strong>Cahorros de Monachil</strong> — short canyon hike with suspension bridges over the Monachil river gorge, 20 min from Granada (~3h round trip, easy). Spectacular for kids</li>
+      <li>OR <strong>Los Cahorros Bajos</strong> — extended loop, 5h, includes Cueva de las Palomas</li>
+    </ul>
+  </div>
+  <div class="block"><div class="block-label">Option B · Albaicín deep dive</div>
+    <ul>
+      <li>Slow morning wandering Albaicín — the UNESCO Moorish quarter — narrow lanes, cármenes (walled garden houses), tea houses</li>
+      <li>Visit the <strong>Carmen de los Mártires</strong> gardens · views from Mirador San Cristóbal (quieter than San Nicolás)</li>
+      <li>Tea + pastries at one of the Calderería Nueva tea houses</li>
+    </ul>
+  </div>
+  <div class="block lunch"><div class="block-label">Lunch</div>
+    <ul><li><em>Mirador de Morayma</em> for Granadino classics in a carmen with Alhambra view</li></ul>
+  </div>
+  <div class="block fine dinner"><div class="block-label">Final dinner</div>
+    <ul><li><strong>Atelier Casa de Comidas</strong> (Granada) — small chef-driven tasting menu, ~€60 pp, top reviewed. <em>Book ahead</em> <span class="pill fine">Fine dining</span></li></ul>
+  </div>
+</div>
+
+<div class="day">
+  <div class="date">Sat Aug 1</div>
+  <div class="head">Exit · Granada → Málaga → CDG</div>
+  <div class="block transit"><div class="block-label">Morning · easy</div>
+    <ul>
+      <li>Coffee at <em>Café Fútbol</em> on Plaza Mariana Pineda — Granada's iconic 100-year-old café</li>
+      <li>Pack, check out by 11</li>
+    </ul>
+  </div>
+  <div class="block transit"><div class="block-label">Afternoon · transit to Paris</div>
+    <ul>
+      <li>Renfe train Granada → Málaga María Zambrano · 1h 30m direct (~€30 pp, €150 family)</li>
+      <li>Taxi 15 min to Málaga AGP airport</li>
+      <li>Fly AGP → CDG · 2h 50m direct on Air France (~$170 pp)</li>
+      <li>Arrive Paris evening · Aug 1–2 at sister's · Aug 3 CDG → KRK for Zakopane</li>
+    </ul>
+  </div>
+</div>
+
+<!-- AIRBNB SHORTLISTS -->
+<section id="airbnbs">
+  <h2>Verified Airbnbs · live availability for these dates</h2>
+
+  <h3 style="color:var(--rust-dark); margin-top:30px;">Lagos · Jul 21–25 · 4 nights · 4A + 1C · 3BR + pool</h3>
 
   <div class="listing top">
     <h3><span class="pill">Top value</span>Sea Apartment · Praia da Luz</h3>
-    <p class="lmeta">3 BR · 4 beds · 3 baths · Guest favorite · 4.94★ · Praia da Luz is the family-friendly sandy beach village 10 min W of Lagos</p>
-    <p class="lprice">$1,840 CAD · 4 nights</p>
-    <a class="btn" href="https://www.airbnb.com/rooms/1217258619258344555?check_in=2026-07-24&check_out=2026-07-28&adults=4&children=1">View on Airbnb</a>
+    <p class="lmeta">3 BR · 4 beds · 3 baths · Guest favorite · 4.94★ · Praia da Luz family-friendly sandy beach village</p>
+    <p class="lprice">$1,837 CAD · 4 nights · Free cancellation</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/1217258619258344555?check_in=2026-07-21&check_out=2026-07-25&adults=4&children=1">View on Airbnb</a>
   </div>
 
   <div class="listing">
-    <h3>3-Bedroom Townhouse #100 · Quinta da Encosta Velha · Budens (near Salema)</h3>
-    <p class="lmeta">3 BR · 5 beds · 3 baths · Superhost · Resort with pool · 5 min drive to Salema beach</p>
-    <p class="lprice">$1,753 CAD · 4 nights (discounted from $2,260)</p>
-    <a class="btn" href="https://www.airbnb.com/rooms/878130279610165176?check_in=2026-07-24&check_out=2026-07-28&adults=4&children=1">View on Airbnb</a>
+    <h3>Townhouse with Private Pool · Panoramic seaview · Praia da Luz</h3>
+    <p class="lmeta">3 BR · 6 beds · 3 baths · Top guest favorite</p>
+    <p class="lprice">$1,634 CAD · 4 nights · Free cancellation</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/13616833?check_in=2026-07-21&check_out=2026-07-25&adults=4&children=1">View on Airbnb</a>
   </div>
 
   <div class="listing">
-    <h3>Vibrant Marina Luxury Apartment · Lagos</h3>
-    <p class="lmeta">3 BR · 3 beds · 3 baths · Superhost · Walking distance to Old Town + marina · Free cancellation</p>
-    <p class="lprice">$2,464 CAD · 4 nights</p>
-    <a class="btn" href="https://www.airbnb.com/rooms/1682620627295012497?check_in=2026-07-24&check_out=2026-07-28&adults=4&children=1">View on Airbnb</a>
+    <h3>Townhouse #035 · Quinta da Encosta Velha · Budens (near Salema)</h3>
+    <p class="lmeta">3 BR · 5 beds · 3 baths · Superhost · 4.82★ · Resort pool, 5 min drive to Salema</p>
+    <p class="lprice">$1,751 CAD · 4 nights (discounted from $2,257)</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/7790358?check_in=2026-07-21&check_out=2026-07-25&adults=4&children=1">View on Airbnb</a>
   </div>
 
   <div class="listing">
-    <h3>Luxury 3 Bedroom Penthouse by the Marina · Lagos</h3>
-    <p class="lmeta">3 BR · 5 beds · 2 baths · Free cancellation</p>
-    <p class="lprice">$2,294 CAD · 4 nights</p>
-    <a class="btn" href="https://www.airbnb.com/rooms/924392578269585569?check_in=2026-07-24&check_out=2026-07-28&adults=4&children=1">View on Airbnb</a>
+    <h3>Vibrant Marina Luxury Apartment · Lagos Old Town</h3>
+    <p class="lmeta">3 BR · 3 beds · 3 baths · Superhost · Walking distance to Old Town + marina</p>
+    <p class="lprice">$2,460 CAD · 4 nights · Free cancellation</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/1682620627295012497?check_in=2026-07-21&check_out=2026-07-25&adults=4&children=1">View on Airbnb</a>
   </div>
 
   <div class="listing">
-    <h3>Villa with Private Pool #143 · Quinta da Encosta · Budens (premium)</h3>
-    <p class="lmeta">3 BR · 5 beds · 3 baths · Guest favorite · Private pool · Near Salema</p>
-    <p class="lprice">$3,105 CAD · 4 nights (discounted from $4,003)</p>
-    <a class="btn" href="https://www.airbnb.com/rooms/40194290?check_in=2026-07-24&check_out=2026-07-28&adults=4&children=1">View on Airbnb</a>
+    <h3>Tideview Residence · Lagos Marina Retreat</h3>
+    <p class="lmeta">3 BR · 5 beds · 3 baths · Superhost · 4.83★</p>
+    <p class="lprice">$2,475 CAD · 4 nights · Free cancellation</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/1533957146590575588?check_in=2026-07-21&check_out=2026-07-25&adults=4&children=1">View on Airbnb</a>
   </div>
 
-  <div class="transit"><strong>Tue Jul 28 — cross-border transit:</strong> Lagos → Faro train 1h 45m · Faro → Sevilla direct bus 3h on ALSA (~€20 pp, €100 family) · Sevilla → El Puerto AVE 1h 45m. Total ~7h+changes — pack snacks, do it as a travel day. <em>Alternative:</em> Lagos → Sevilla via Tavira + bus (faster overall, ~5h via Eva/Comes bus crossing the Guadiana). Or fly Faro→Sevilla (1h flight, defeats train ethos).</div>
-</section>
-
-<!-- STOP 3: CÁDIZ / EL PUERTO -->
-<section class="stop" id="cadiz">
-  <h2>Stop 3 · Cádiz &amp; El Puerto de Santa María</h2>
-  <p class="stop-meta"><strong>Jul 28 – Aug 1 · 4 nights</strong> · Costa de la Luz · 3000-year-old port city + wider Atlantic sandy beaches</p>
-
-  <img class="hero-img" data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/3/35/Cadiz_aerea.jpg" alt="Cádiz aerial">
-
-  <div>
-    <span class="pill beach">La Caleta · Cádiz city beach</span>
-    <span class="pill beach">Bolonia dunes · Zahara (day trip)</span>
-    <span class="pill culture">Cádiz Old Town · Cathedral</span>
-    <span class="pill food">Sherry from Jerez · tuna ronqueo</span>
+  <div class="listing">
+    <h3>Spacious Lagos Villa with Pool, Hot Tub &amp; Gardens (premium)</h3>
+    <p class="lmeta">4 BR · 7 beds · 4.5 baths · Guest favorite</p>
+    <p class="lprice">$3,194 CAD · 4 nights · Free cancellation</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/1323911498888517637?check_in=2026-07-21&check_out=2026-07-25&adults=4&children=1">View on Airbnb</a>
   </div>
 
-  <h4>Why here</h4>
-  <p>Cádiz is the oldest continuously inhabited city in Western Europe — Phoenician port still humming. La Caleta is the in-city beach (the Halle Berry James Bond beach). El Puerto de Santa María (across the bay, 30 min ferry or 15-min AVE train) is the sherry-bodega town and a quieter base. Day trips: <strong>Bolonia</strong> (1h drive, wide sandy beach with the giant dune you climb), <strong>Jerez</strong> (bodega tours), <strong>Sanlúcar de Barrameda</strong> (manzanilla sherry + horse races on the beach).</p>
-
-  <div class="photo-grid">
-    <figure>
-      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/8/80/Cadiz_playa_caleta.jpg" alt="Playa de La Caleta">
-      <figcaption>La Caleta · city beach in Cádiz Old Town</figcaption>
-    </figure>
-    <figure>
-      <img data-lightbox src="https://upload.wikimedia.org/wikipedia/commons/5/57/Beach_of_Bolonia_-_014_-_view.jpg" alt="Bolonia Beach">
-      <figcaption>Playa de Bolonia · 1h drive, wide Atlantic dunes</figcaption>
-    </figure>
-  </div>
-
-  <h4>Verified Airbnbs · Jul 28–Aug 1 · 4A + 1C · 3BR+</h4>
+  <h3 style="color:var(--rust-dark); margin-top:30px;">Sevilla · Jul 25–27 · 2 nights · 4A + 1C · 3BR</h3>
 
   <div class="listing top">
-    <h3><span class="pill">Top value</span>Penthouse Terraces + Parking · Chiclana de la Frontera</h3>
-    <p class="lmeta">3 BR · 4 beds · 2 baths · Top guest favorite · 20 min S of Cádiz, walking distance to Playa de la Barrosa (long sandy)</p>
-    <p class="lprice">$1,064 CAD · 4 nights</p>
-    <a class="btn" href="https://www.airbnb.com/rooms/679573630328413236?check_in=2026-07-28&check_out=2026-08-01&adults=4&children=1">View on Airbnb</a>
+    <h3><span class="pill">Top value</span>Centric &amp; Cozy · San Lorenzo · Terrace</h3>
+    <p class="lmeta">3 BR · 4 beds · 2 baths · Top guest favorite · Casco Antiguo</p>
+    <p class="lprice">$788 CAD · 2 nights · Free cancellation</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/1262118300065820979?check_in=2026-07-25&check_out=2026-07-27&adults=4&children=1">View on Airbnb</a>
   </div>
 
   <div class="listing">
-    <h3>Fantastic Apartment in Cádiz · Next to the beach</h3>
-    <p class="lmeta">3 BR · 4 beds · 2 baths · Guest favorite</p>
-    <p class="lprice">$1,258 CAD · 4 nights</p>
-    <a class="btn" href="https://www.airbnb.com/rooms/623085251758723773?check_in=2026-07-28&check_out=2026-08-01&adults=4&children=1">View on Airbnb</a>
+    <h3>Cathedral Vista · Private Rooftop · Santa Cruz</h3>
+    <p class="lmeta">3 BR · 4 beds · 3 baths · Top guest favorite · 4.98★ · Walking distance to Cathedral + Alcázar</p>
+    <p class="lprice">$1,055 CAD · 2 nights (discounted from $1,283) · Free cancellation</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/39041083?check_in=2026-07-25&check_out=2026-07-27&adults=4&children=1">View on Airbnb</a>
   </div>
 
   <div class="listing">
-    <h3>Ocean View Apartment · 1st row beach · Cádiz</h3>
-    <p class="lmeta">3 BR · 5 beds · 2 baths · Superhost</p>
-    <p class="lprice">$1,407 CAD · 4 nights</p>
-    <a class="btn" href="https://www.airbnb.com/rooms/707143456415754242?check_in=2026-07-28&check_out=2026-08-01&adults=4&children=1">View on Airbnb</a>
+    <h3>Alohamundi Arenal II · Centro</h3>
+    <p class="lmeta">3 BR · 4 beds · 2 baths · Superhost · 4.86★ (328 reviews) · Between river and Cathedral</p>
+    <p class="lprice">$842 CAD · 2 nights · Free cancellation</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/49608486?check_in=2026-07-25&check_out=2026-07-27&adults=4&children=1">View on Airbnb</a>
   </div>
 
   <div class="listing">
-    <h3>Elegant Apartment · Plaza de España · Cádiz</h3>
-    <p class="lmeta">3 BR · 3 beds · 2 baths · Superhost · Old Town location</p>
-    <p class="lprice">$1,613 CAD · 4 nights</p>
-    <a class="btn" href="https://www.airbnb.com/rooms/1478554594456534740?check_in=2026-07-28&check_out=2026-08-01&adults=4&children=1">View on Airbnb</a>
+    <h3>Alohamundi San Francisco Deluxe · Centro</h3>
+    <p class="lmeta">3 BR · 5 beds · 2 baths · Guest favorite · 4.9★</p>
+    <p class="lprice">$900 CAD · 2 nights · Free cancellation</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/715095887980282087?check_in=2026-07-25&check_out=2026-07-27&adults=4&children=1">View on Airbnb</a>
   </div>
 
   <div class="listing">
-    <h3>Dehesa de las Yeguas · House with pool · 15 min beach · Cádiz outskirts</h3>
-    <p class="lmeta">3 BR · 6 beds · 2 baths · Guest favorite · Private pool</p>
-    <p class="lprice">$1,866 CAD · 4 nights</p>
-    <a class="btn" href="https://www.airbnb.com/rooms/19356191?check_in=2026-07-28&check_out=2026-08-01&adults=4&children=1">View on Airbnb</a>
+    <h3>3B Bright Downtown Sevilla · ADiaz</h3>
+    <p class="lmeta">3 BR · 4 beds · 2 baths · Guest favorite · Arenal area</p>
+    <p class="lprice">$1,026 CAD · 2 nights · Free cancellation</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/853511040611347543?check_in=2026-07-25&check_out=2026-07-27&adults=4&children=1">View on Airbnb</a>
+  </div>
+
+  <h3 style="color:var(--rust-dark); margin-top:30px;">Granada · Jul 27–Aug 1 · 5 nights · 4A + 1C · 3BR</h3>
+
+  <div class="listing top">
+    <h3><span class="pill">Top value</span>Alhambra · Albaicín</h3>
+    <p class="lmeta">3 BR · 4 beds · 2 baths · Superhost · 4.9★ (203 reviews) · In the heart of the historic Albaicín quarter</p>
+    <p class="lprice">$750 CAD · 5 nights · Free cancellation · Unbeatable price</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/714246997256594806?check_in=2026-07-27&check_out=2026-08-01&adults=4&children=1">View on Airbnb</a>
   </div>
 
   <div class="listing">
-    <h3>Luxury 3BR near La Caleta Beach · Cádiz (premium)</h3>
-    <p class="lmeta">3 BR · 4 beds · 2 baths · 4.74★ · Free cancellation · In the heart of Old Cádiz</p>
-    <p class="lprice">$2,291 CAD · 4 nights (discounted from $2,907)</p>
-    <a class="btn" href="https://www.airbnb.com/rooms/1268094542158268309?check_in=2026-07-28&check_out=2026-08-01&adults=4&children=1">View on Airbnb</a>
+    <h3>House Next to the Cathedral of Granada</h3>
+    <p class="lmeta">3 BR · 4 beds · 2 baths · Guest favorite · Central location</p>
+    <p class="lprice">$885 CAD · 5 nights · Free cancellation</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/23984496?check_in=2026-07-27&check_out=2026-08-01&adults=4&children=1">View on Airbnb</a>
   </div>
 
-  <div class="transit"><strong>Sat Aug 1 — exit:</strong> El Puerto/Cádiz → Sevilla AVE 1h 45m · taxi 20 min Sevilla Santa Justa → SVQ airport · fly SVQ → CDG 2h 45m direct AF. Total ~5–6h. Aug 1–2 at sister's in Paris, Aug 3 CDG → KRK as planned.</div>
+  <div class="listing">
+    <h3>Eco Center Granatensis · Pasiegas-Cathedral</h3>
+    <p class="lmeta">3 BR · 5 beds · 2 baths · Guest favorite · 4.82★</p>
+    <p class="lprice">$909 CAD · 5 nights (discounted from $991) · Free cancellation</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/1193887693670288857?check_in=2026-07-27&check_out=2026-08-01&adults=4&children=1">View on Airbnb</a>
+  </div>
+
+  <div class="listing">
+    <h3>Luxury Penthouse Gran Capitán II · Centro-Sagrario</h3>
+    <p class="lmeta">3 BR · 5 beds · 2 baths · Guest favorite</p>
+    <p class="lprice">$1,124 CAD · 5 nights (discounted from $1,361) · Free cancellation</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/1111546771480405822?check_in=2026-07-27&check_out=2026-08-01&adults=4&children=1">View on Airbnb</a>
+  </div>
+
+  <div class="listing">
+    <h3>Morayma House · Terrace with Alhambra view (premium)</h3>
+    <p class="lmeta">3 BR · 8 beds · 3.5 baths · Top guest favorite · 4.99★ · Front-row Alhambra panorama from your own terrace</p>
+    <p class="lprice">$1,986 CAD · 5 nights</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/689769766174447339?check_in=2026-07-27&check_out=2026-08-01&adults=4&children=1">View on Airbnb</a>
+  </div>
+
+  <div class="listing">
+    <h3>Carmen San Andrés · Albaicín (premium)</h3>
+    <p class="lmeta">3 BR · 4 beds · 2 baths · Guest favorite · 4.97★ · Traditional carmen with private walled garden</p>
+    <p class="lprice">$2,216 CAD · 5 nights · Free cancellation</p>
+    <a class="btn" href="https://www.airbnb.com/rooms/1222878014505116100?check_in=2026-07-27&check_out=2026-08-01&adults=4&children=1">View on Airbnb</a>
+  </div>
 </section>
 
 <!-- LOGISTICS -->
@@ -307,45 +575,48 @@
 
   <h3>Flights · open-jaw</h3>
   <ul class="notes">
-    <li>CDG → FAO Faro (Jul 21) · Air France/Vueling/TAP direct · ~$160 pp · ~$800 family · 2h 45m</li>
-    <li>SVQ Sevilla → CDG (Aug 1) · Air France direct · ~$180 pp · ~$900 family · 2h 45m</li>
-    <li><strong>Total flights:</strong> ~$1,700 CAD round trip — vs $2,406 for the original CDG↔HER booking</li>
+    <li>CDG → FAO Faro (Jul 21) · Air France / TAP / Vueling direct · ~$160 pp · ~$800 family · 2h 45m</li>
+    <li>AGP Málaga → CDG (Aug 1) · Air France direct · ~$170 pp · ~$850 family · 2h 50m</li>
+    <li><strong>Total flights:</strong> ~$1,650 CAD round trip — vs $2,406 for the original CDG↔HER booking</li>
   </ul>
 
-  <h3>Ground transport</h3>
-  <table>
-    <thead><tr><th>Leg</th><th>Mode</th><th>Time</th><th class="right">Family of 5</th></tr></thead>
+  <h3>Trains + bus · all under 4h between stops</h3>
+  <table style="width:100%; border-collapse:collapse; margin:12px 0 20px; font-size:14px;">
+    <thead><tr><th style="background:var(--sand); text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule);">Leg</th><th style="background:var(--sand); text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule);">Mode</th><th style="background:var(--sand); text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule);">Time</th><th style="background:var(--sand); text-align:right; padding:8px 10px; border-bottom:1px solid var(--rule);">Family of 5</th></tr></thead>
     <tbody>
-      <tr><td>FAO airport → Tavira</td><td>Airport bus + CP train</td><td>45 min</td><td class="right">~€40</td></tr>
-      <tr><td>Tavira → Lagos</td><td>CP regional (direct)</td><td>2h 30m</td><td class="right">~€50</td></tr>
-      <tr><td>Lagos → Sevilla (cross-border)</td><td>CP to Faro + ALSA bus to Sevilla</td><td>~5–6h</td><td class="right">~€120</td></tr>
-      <tr><td>Sevilla → El Puerto / Cádiz</td><td>Renfe AVE direct</td><td>1h 45m</td><td class="right">~€100</td></tr>
-      <tr><td>Cádiz/El Puerto → Sevilla SVQ airport</td><td>AVE + airport taxi</td><td>2h</td><td class="right">~€120</td></tr>
-      <tr><th>Total ground</th><th></th><th></th><th class="right">~€430 / ~$640 CAD</th></tr>
+      <tr><td style="padding:8px 10px; border-bottom:1px solid var(--rule);">Faro airport → Lagos</td><td style="padding:8px 10px; border-bottom:1px solid var(--rule);">CP regional + airport bus</td><td style="padding:8px 10px; border-bottom:1px solid var(--rule);">2h</td><td style="text-align:right; padding:8px 10px; border-bottom:1px solid var(--rule);">~€50</td></tr>
+      <tr><td style="padding:8px 10px; border-bottom:1px solid var(--rule);">Lagos → Faro → Sevilla</td><td style="padding:8px 10px; border-bottom:1px solid var(--rule);">CP + ALSA cross-border bus</td><td style="padding:8px 10px; border-bottom:1px solid var(--rule);">~5h</td><td style="text-align:right; padding:8px 10px; border-bottom:1px solid var(--rule);">~€150</td></tr>
+      <tr><td style="padding:8px 10px; border-bottom:1px solid var(--rule);">Sevilla → Granada</td><td style="padding:8px 10px; border-bottom:1px solid var(--rule);">Renfe AVE direct</td><td style="padding:8px 10px; border-bottom:1px solid var(--rule);">2h 45m</td><td style="text-align:right; padding:8px 10px; border-bottom:1px solid var(--rule);">~€175</td></tr>
+      <tr><td style="padding:8px 10px; border-bottom:1px solid var(--rule);">Granada → Málaga AGP</td><td style="padding:8px 10px; border-bottom:1px solid var(--rule);">Renfe + taxi to airport</td><td style="padding:8px 10px; border-bottom:1px solid var(--rule);">1h 45m</td><td style="text-align:right; padding:8px 10px; border-bottom:1px solid var(--rule);">~€170</td></tr>
+      <tr><th style="background:var(--sand); text-align:left; padding:8px 10px;">Total ground</th><th style="padding:8px 10px;"></th><th style="padding:8px 10px;"></th><th style="text-align:right; padding:8px 10px;">~€545 / ~$810 CAD</th></tr>
     </tbody>
   </table>
 
-  <h3>Rental car (optional, recommended for Stop 3)</h3>
-  <p>Day trips to Bolonia, Zahara, Sanlúcar, Jerez bodegas all reachable by bus/train but a car gives flexibility. Pick up at Sevilla station, drop at SVQ airport. ~€200–300 for 4 days.</p>
-
-  <h3>Must-book-ahead</h3>
+  <h3>Must-book-ahead (highest priority first)</h3>
   <ul class="notes">
-    <li>Ferry to Ilha de Tavira — buy at dock, every 30 min summer</li>
-    <li>Ponta da Piedade kayak — book at Lagos marina day-of</li>
-    <li>Lagos→Sevilla ALSA bus — book on ALSA website 1–2 weeks ahead in August</li>
-    <li>Jerez sherry bodega tour (Tio Pepe / Lustau) — book online a few days ahead</li>
-    <li>Cádiz Cathedral + Tavira Wine Bar Hostal — both worth a quick online check</li>
+    <li><strong>Alhambra Nasrid Palaces</strong> — at <a href="https://tickets.alhambra-patronato.es/">tickets.alhambra-patronato.es</a> · 6–8 weeks ahead · Nasrid slot 8:30 or 9:00</li>
+    <li><strong>Bon Bon Carvoeiro</strong> (Michelin) — 2+ weeks ahead</li>
+    <li><strong>Atelier Casa de Comidas Granada</strong> — 1+ week ahead</li>
+    <li>Real Alcázar Sevilla skip-the-line — 1 week ahead</li>
+    <li>Casa de la Memoria flamenco Sevilla — 3 days ahead</li>
+    <li>Sacromonte cave flamenco — 2 days ahead</li>
+    <li>Hammam Al Ándalus Granada — 1 week ahead</li>
+    <li>ALSA bus Faro→Sevilla — book on alsa.com 1 week ahead</li>
   </ul>
 
-  <h3>Quick-booking links</h3>
-  <a class="btn" href="https://www.cp.pt/passageiros/en">CP Trains Portugal</a>
-  <a class="btn" href="https://www.alsa.com/en/">ALSA Bus (cross-border)</a>
-  <a class="btn" href="https://www.renfe.com/es/en">Renfe Trains Spain</a>
-  <a class="btn olive" href="https://www.airfrance.us/">Air France · book flights</a>
+  <h3>Rental car (optional)</h3>
+  <p>You can do this whole trip without a car. But: a rental in Lagos (for the Marinha/Benagil/Sagres day trips) and a rental from Granada (for Las Alpujarras) would each save 1–2 hours of bus juggling. Or use FreeNow taxis on-demand.</p>
+
+  <h3>Quick links</h3>
+  <a class="btn" href="https://www.cp.pt/passageiros/en">CP Portugal trains</a>
+  <a class="btn" href="https://www.alsa.com/en/">ALSA bus</a>
+  <a class="btn" href="https://www.renfe.com/es/en">Renfe Spain trains</a>
+  <a class="btn olive" href="https://tickets.alhambra-patronato.es/">Alhambra tickets</a>
+  <a class="btn olive" href="https://www.airfrance.us/">Air France flights</a>
 </section>
 
 <div class="footnote">
-Generated 2026-05-13 by Morgan · Chosen Arc v1 · all Airbnb listings verified live in Chrome with check_in/check_out/guest params · prices reflect Airbnb's display at time of verification and may shift before booking · all images sourced from Wikipedia REST API
+Generated 2026-05-13 by Morgan · Chosen Arc · Option H · all Airbnbs verified live in Chrome with check_in/check_out/guest params · day-by-day tuned for nature + hiking + beaches first, with cultural anchors and fine-dining picks woven in · prices reflect Airbnb's display at time of verification
 </div>
 
 </div>
